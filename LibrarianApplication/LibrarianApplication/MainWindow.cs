@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
 
 namespace LibrarianApplication
 {
@@ -24,7 +26,22 @@ namespace LibrarianApplication
 
         private void addDocumentClicked(object sender, EventArgs e)
         {
-            //Add a new document to the selected folder
+            /*
+            int size = -1;
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    size = text.Length;
+                }
+                catch (IOException)
+                {
+                }
+            }
+            */
         }
 
         private void addNewCollectionClicked(object sender, EventArgs e)
