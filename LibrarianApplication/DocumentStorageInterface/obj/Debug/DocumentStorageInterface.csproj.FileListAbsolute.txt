@@ -3,3 +3,8 @@ C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\bin\Debug
 C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.csprojResolveAssemblyReference.cache
 C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.dll
 C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\bin\Debug\DocumentStorageInterface.dll
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\bin\Debug\DocumentStorageInterface.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.dll
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.csprojResolveAssemblyReference.cache

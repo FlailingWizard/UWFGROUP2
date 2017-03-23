@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Diagnostics;
-<<<<<<< HEAD
-=======
 using System.IO;
->>>>>>> 2075f6721741d50f566105f291cdfe49f6e66d31
+using System.Drawing;
 
 namespace LibrarianApplication
 {
@@ -15,9 +13,21 @@ namespace LibrarianApplication
         {
             COLLECTION_VIEW, DOCUMENT_VIEW
         }
+        public enum ICONS
+        {
+            // Note: The order here must be the same as the order in which these are loaded to
+            // the imagelist in loadIcons() method.
+            COLLECTION_ICON, DOCUMENT_ICON
+        }
 
+        private const string COLLECTION_ICON_FILENAME = "../../collectionIcon.ico";
+        private const string DOCUMENT_ICON_FILENAME = "../../documentIcon.ico";
+
+        // fields
         private VIEW_MODE mode;
+        private ImageList icons;
 
+        // accessors
         public VIEW_MODE Mode
         {
             get
@@ -27,22 +37,31 @@ namespace LibrarianApplication
 
             set
             {
+                setMode(mode);
                 mode = value;
             }
         }
+
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        // methods belonging to controls
+        // NOTE: don't delete w/out removing reference from Designer window first
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            // set default view
+            this.Mode = VIEW_MODE.COLLECTION_VIEW;
 
-            this.mode = VIEW_MODE.COLLECTION_VIEW;
+            // instantiate and load icons
+            icons = loadIcons();
+
+            // add the imagelist to both listViews
+            listCollections.LargeImageList = listDocuments.LargeImageList = icons;
 
         }
-
 
         private void addDocumentClicked(object sender, EventArgs e)
         {
@@ -69,23 +88,43 @@ namespace LibrarianApplication
             // Add a new folder to the application
         }
 
-        private void listCollections_SelectedIndexChanged(object sender, EventArgs e)
+        private void mainWindowLayout_Layout(object sender, LayoutEventArgs e)
+        {
+            // resize the list controls
+            listCollections.Bounds = listDocuments.Bounds = mainWindowLayout.ClientRectangle;
+
+        }
+
+        private void MainWindow_Layout(object sender, LayoutEventArgs e)
         {
 
         }
 
-        private void MainWindow_Resize(object sender, EventArgs e)
+        // helper methods
+        private void setMode(VIEW_MODE viewMode)
         {
-            resizeLists();
-            
+
+            this.mode = viewMode;
+            if (viewMode == VIEW_MODE.COLLECTION_VIEW)
+            {
+                listCollections.Visible = true;
+                listDocuments.Visible = false;
+            }
+            else
+            {
+                listCollections.Visible = false;
+                listDocuments.Visible = true;
+            }
+
         }
 
-        private void resizeLists()
+        private ImageList loadIcons()
         {
-            Debug.Print("Resize");
-            listCollections.Top = listCollections.Left = 0;
-            listCollections.Width = this.Width;
-            listCollections.Height = this.Height;
+            ImageList list = new ImageList();
+            // possible exceptions are not caught because we want this to fail if no icon files
+            list.Images.Add(Bitmap.FromFile(COLLECTION_ICON_FILENAME));
+            list.Images.Add(Bitmap.FromFile(DOCUMENT_ICON_FILENAME));
+            return list;
         }
 
 

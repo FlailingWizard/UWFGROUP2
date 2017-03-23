@@ -5,3 +5,10 @@ C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\
 C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.csprojResolveAssemblyReference.cache
 C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.dll
 C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageImplementation.dll
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageImplementation.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageInterface.dll
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageInterface.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.csprojResolveAssemblyReference.cache
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.dll
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.pdb
