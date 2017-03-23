@@ -35,7 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.mainWindowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.listCollections = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
+            this.mainWindowLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -45,7 +47,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(878, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(658, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,62 +58,78 @@
             this.addNewCollectionToolStripMenuItem,
             this.addDocumentToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // addNewCollectionToolStripMenuItem
             // 
             this.addNewCollectionToolStripMenuItem.Name = "addNewCollectionToolStripMenuItem";
-            this.addNewCollectionToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.addNewCollectionToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.addNewCollectionToolStripMenuItem.Text = "Add Collection";
             this.addNewCollectionToolStripMenuItem.Click += new System.EventHandler(this.addNewCollectionClicked);
             // 
             // addDocumentToolStripMenuItem
             // 
             this.addDocumentToolStripMenuItem.Name = "addDocumentToolStripMenuItem";
-            this.addDocumentToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.addDocumentToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.addDocumentToolStripMenuItem.Text = "Add Document";
             this.addDocumentToolStripMenuItem.Click += new System.EventHandler(this.addDocumentClicked);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(630, 9);
+            this.label1.Location = new System.Drawing.Point(472, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Search:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(693, 4);
+            this.textBox1.Location = new System.Drawing.Point(520, 3);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 22);
+            this.textBox1.Size = new System.Drawing.Size(119, 20);
             this.textBox1.TabIndex = 2;
             // 
             // mainWindowLayout
             // 
-            this.mainWindowLayout.Location = new System.Drawing.Point(0, 29);
+            this.mainWindowLayout.Controls.Add(this.listCollections);
+            this.mainWindowLayout.Location = new System.Drawing.Point(0, 24);
+            this.mainWindowLayout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mainWindowLayout.Name = "mainWindowLayout";
-            this.mainWindowLayout.Size = new System.Drawing.Size(878, 462);
+            this.mainWindowLayout.Size = new System.Drawing.Size(658, 375);
             this.mainWindowLayout.TabIndex = 3;
+            // 
+            // listCollections
+            // 
+            this.listCollections.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.listCollections.Location = new System.Drawing.Point(3, 3);
+            this.listCollections.Name = "listCollections";
+            this.listCollections.Size = new System.Drawing.Size(655, 372);
+            this.listCollections.TabIndex = 0;
+            this.listCollections.UseCompatibleStateImageBehavior = false;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(878, 491);
+            this.ClientSize = new System.Drawing.Size(658, 399);
             this.Controls.Add(this.mainWindowLayout);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainWindow";
             this.Text = " Librarian Application";
             this.Load += new System.EventHandler(this.MainWindow_Load);
+            this.Resize += new System.EventHandler(this.MainWindow_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.mainWindowLayout.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +144,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.FlowLayoutPanel mainWindowLayout;
+        private System.Windows.Forms.ListView listCollections;
     }
 }
 

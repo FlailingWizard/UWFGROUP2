@@ -7,3 +7,12 @@ D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplicat
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe.config
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csprojResolveAssemblyReference.cache
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.MainWindow.resources
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.Properties.Resources.resources
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
