@@ -1,0 +1,5 @@
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\bin\Debug\DocumentDeletionInterface.dll
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\bin\Debug\DocumentDeletionInterface.pdb
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\obj\Debug\DocumentDeletionInterface.csprojResolveAssemblyReference.cache
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\obj\Debug\DocumentDeletionInterface.dll
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\obj\Debug\DocumentDeletionInterface.pdb

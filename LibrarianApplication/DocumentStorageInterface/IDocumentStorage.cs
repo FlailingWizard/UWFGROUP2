@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DocumentStorageInterface
 {
-    interface IDocumentStorage
+    public interface IDocumentStorage
     {
-        String storeDoc();
+        String storeDoc(String fileName, String sourcePath, String targetPath);
     }
 }

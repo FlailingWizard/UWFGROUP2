@@ -7,3 +7,12 @@ D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplicat
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe.config
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.pdb
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csprojResolveAssemblyReference.cache
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.MainWindow.resources
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.Properties.Resources.resources
+C:\Users\crs40\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
