@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Diagnostics;
+<<<<<<< HEAD
+=======
+using System.IO;
+>>>>>>> 2075f6721741d50f566105f291cdfe49f6e66d31
 
 namespace LibrarianApplication
 {
@@ -42,7 +46,22 @@ namespace LibrarianApplication
 
         private void addDocumentClicked(object sender, EventArgs e)
         {
-            //Add a new document to the selected folder
+            /*
+            int size = -1;
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
+            {
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    size = text.Length;
+                }
+                catch (IOException)
+                {
+                }
+            }
+            */
         }
 
         private void addNewCollectionClicked(object sender, EventArgs e)
