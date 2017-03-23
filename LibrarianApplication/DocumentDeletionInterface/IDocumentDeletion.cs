@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DocumentDeletionInterface
 {
-    interface IDocumentDeletion
+    public interface IDocumentDeletion
     {
         String deleteDoc();
     }
