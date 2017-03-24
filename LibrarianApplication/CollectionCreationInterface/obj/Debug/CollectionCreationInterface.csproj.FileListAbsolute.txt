@@ -2,3 +2,8 @@ C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreatio
 C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\bin\Debug\CollectionCreationInterface.pdb
 C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.dll
 C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\bin\Debug\CollectionCreationInterface.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\bin\Debug\CollectionCreationInterface.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.csprojResolveAssemblyReference.cache
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.pdb

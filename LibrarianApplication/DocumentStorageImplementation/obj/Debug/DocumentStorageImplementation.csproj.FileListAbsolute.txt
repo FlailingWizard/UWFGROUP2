@@ -19,3 +19,10 @@ C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\DocumentStorageIm
 C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.csprojResolveAssemblyReference.cache
 C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.dll
 C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageImplementation.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageImplementation.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageInterface.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\bin\Debug\DocumentStorageInterface.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.csprojResolveAssemblyReference.cache
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageImplementation\obj\Debug\DocumentStorageImplementation.pdb

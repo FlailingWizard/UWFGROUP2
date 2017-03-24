@@ -1,0 +1,7 @@
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\TestLibrarianApplication\bin\Debug\TestLibrarianApplication.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\TestLibrarianApplication\bin\Debug\TestLibrarianApplication.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\TestLibrarianApplication\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\TestLibrarianApplication\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\TestLibrarianApplication\obj\Debug\TestLibrarianApplication.csprojResolveAssemblyReference.cache
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\TestLibrarianApplication\obj\Debug\TestLibrarianApplication.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\TestLibrarianApplication\obj\Debug\TestLibrarianApplication.pdb
