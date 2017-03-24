@@ -1,7 +1,3 @@
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\bin\Debug\Document.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\bin\Debug\Document.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\obj\Debug\Document.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\obj\Debug\Document.pdb
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\Document\bin\Debug\Document.dll
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\Document\bin\Debug\Document.pdb
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\Document\obj\Debug\Document.csprojResolveAssemblyReference.cache

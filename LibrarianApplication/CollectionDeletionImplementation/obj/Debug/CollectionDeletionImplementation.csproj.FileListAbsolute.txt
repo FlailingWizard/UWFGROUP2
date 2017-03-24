@@ -1,10 +1,3 @@
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\bin\Debug\CollectionDeletionImplementation.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\bin\Debug\CollectionDeletionImplementation.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\bin\Debug\CollectionDeletionInterface.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\bin\Debug\CollectionDeletionInterface.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\obj\Debug\CollectionDeletionImplementation.csprojResolveAssemblyReference.cache
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\obj\Debug\CollectionDeletionImplementation.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\obj\Debug\CollectionDeletionImplementation.pdb
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\bin\Debug\CollectionDeletionImplementation.dll
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\bin\Debug\CollectionDeletionImplementation.pdb
 D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionImplementation\bin\Debug\CollectionDeletionInterface.dll

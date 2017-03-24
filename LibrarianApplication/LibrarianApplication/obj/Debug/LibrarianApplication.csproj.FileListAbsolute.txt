@@ -1,38 +1,26 @@
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe.config
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.pdb
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csprojResolveAssemblyReference.cache
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.MainWindow.resources
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.Properties.Resources.resources
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb
-<<<<<<< HEAD
-C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.AddCollectionWindow.resources
-=======
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe.config
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csprojResolveAssemblyReference.cache
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.MainWindow.resources
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.Properties.Resources.resources
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationImplementation.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionImplementation.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionImplementation.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageImplementation.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationInterface.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionInterface.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionInterface.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageInterface.dll
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationImplementation.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionImplementation.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionImplementation.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageImplementation.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationInterface.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionInterface.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionInterface.pdb
-C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageInterface.pdb
->>>>>>> 4c0582a5ab83439f9f13d02a31cd3e7bc956a3e5
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe.config
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.exe
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\LibrarianApplication.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationImplementation.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionImplementation.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionImplementation.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageImplementation.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationInterface.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionInterface.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionInterface.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageInterface.dll
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationImplementation.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionImplementation.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionImplementation.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageImplementation.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionCreationInterface.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\CollectionDeletionInterface.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentDeletionInterface.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\bin\Debug\DocumentStorageInterface.pdb
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csprojResolveAssemblyReference.cache
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.AddCollectionWindow.resources
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.MainWindow.resources
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.Properties.Resources.resources
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
+D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb

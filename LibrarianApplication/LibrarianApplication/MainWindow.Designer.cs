@@ -67,7 +67,6 @@
             this.addNewCollectionToolStripMenuItem.Name = "addNewCollectionToolStripMenuItem";
             this.addNewCollectionToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.addNewCollectionToolStripMenuItem.Text = "Add Collection";
-            this.addNewCollectionToolStripMenuItem.Click += new System.EventHandler(this.addNewCollectionClicked);
             // 
             // addDocumentToolStripMenuItem
             // 
@@ -106,17 +105,13 @@
             this.mainWindowLayout.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainWindowLayout.Size = new System.Drawing.Size(897, 463);
             this.mainWindowLayout.TabIndex = 3;
-            this.mainWindowLayout.Layout += new System.Windows.Forms.LayoutEventHandler(this.mainWindowLayout_Layout);
             // 
             // listCollections
             // 
-<<<<<<< HEAD
             this.listCollections.Location = new System.Drawing.Point(5, 5);
             this.listCollections.MultiSelect = false;
-=======
             this.listCollections.Location = new System.Drawing.Point(7, 6);
             this.listCollections.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> 8fd6ef12f0c2554596a6faac9f341a11ec426af5
             this.listCollections.Name = "listCollections";
             this.listCollections.Size = new System.Drawing.Size(436, 291);
             this.listCollections.TabIndex = 0;
@@ -125,13 +120,10 @@
             // 
             // listDocuments
             // 
-<<<<<<< HEAD
             this.listDocuments.Location = new System.Drawing.Point(5, 248);
             this.listDocuments.MultiSelect = false;
-=======
             this.listDocuments.Location = new System.Drawing.Point(7, 305);
             this.listDocuments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> 8fd6ef12f0c2554596a6faac9f341a11ec426af5
             this.listDocuments.Name = "listDocuments";
             this.listDocuments.Size = new System.Drawing.Size(237, 146);
             this.listDocuments.TabIndex = 1;
@@ -154,7 +146,6 @@
             this.Name = "MainWindow";
             this.Text = " Librarian Application";
             this.Load += new System.EventHandler(this.MainWindow_Load);
-            this.Layout += new System.Windows.Forms.LayoutEventHandler(this.MainWindow_Layout);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.mainWindowLayout.ResumeLayout(false);
