@@ -1,0 +1,4 @@
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\bin\Debug\Document.dll
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\bin\Debug\Document.pdb
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\obj\Debug\Document.dll
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Document\obj\Debug\Document.pdb

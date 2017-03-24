@@ -20,12 +20,12 @@ namespace DocumentStorageImplementation
             string targetP = @targetPath;
 
             // Use Path class to manipulate file and directory paths.
-            string sourceFile = System.IO.Path.Combine(sourcePath, fileName);
-            string destFile = System.IO.Path.Combine(targetPath, fileName);
+            string sourceFile = System.IO.Path.Combine(sourceP, fileN);
+            string destFile = System.IO.Path.Combine(targetP, fileN);
 
             // To copy a folder's contents to a new location:
             // Create a new target folder, if necessary.
-            if (!System.IO.Directory.Exists(targetPath))
+            if (!System.IO.Directory.Exists(targetP))
             {
                 Console.WriteLine("Opps no Directory");
             }
@@ -34,16 +34,16 @@ namespace DocumentStorageImplementation
             // overwrite the destination file if it already exists.
             System.IO.File.Copy(sourceFile, destFile, true);
 
-            if (System.IO.Directory.Exists(sourcePath))
+            if (System.IO.Directory.Exists(sourceP))
             {
-                string[] files = System.IO.Directory.GetFiles(sourcePath);
+                string[] files = System.IO.Directory.GetFiles(sourceP);
 
                 // Copy the files and overwrite destination files if they already exist.
                 foreach (string s in files)
                 {
                     // Use static Path methods to extract only the file name from the path.
                     fileName = System.IO.Path.GetFileName(s);
-                    destFile = System.IO.Path.Combine(targetPath, fileName);
+                    destFile = System.IO.Path.Combine(targetP, fileN);
                     System.IO.File.Copy(s, destFile, true);
                 }
             }

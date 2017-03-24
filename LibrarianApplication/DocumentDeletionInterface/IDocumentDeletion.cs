@@ -8,6 +8,6 @@ namespace DocumentDeletionInterface
 {
     public interface IDocumentDeletion
     {
-        String deleteDoc();
+        String deleteDoc(String deletePath);
     }
 }
