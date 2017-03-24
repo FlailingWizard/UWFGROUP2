@@ -65,12 +65,13 @@ namespace LibrarianApplication
 
         private void addDocumentClicked(object sender, EventArgs e)
         {
-            /*
+            OpenFileDialog fileDialog = new OpenFileDialog();
+
             int size = -1;
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            DialogResult result = fileDialog.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {
-                string file = openFileDialog1.FileName;
+                string file = fileDialog.FileName;
                 try
                 {
                     string text = File.ReadAllText(file);
@@ -80,7 +81,10 @@ namespace LibrarianApplication
                 {
                 }
             }
-            */
+            
+           // Call method to send to add document here
+           // The file variable holds the file path of the document the user wants to import
+           
         }
 
         private void addNewCollectionClicked(object sender, EventArgs e)
