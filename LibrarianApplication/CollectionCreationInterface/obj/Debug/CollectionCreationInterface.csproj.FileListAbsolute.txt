@@ -1,5 +1,0 @@
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\bin\Debug\CollectionCreationInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\bin\Debug\CollectionCreationInterface.pdb
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.csprojResolveAssemblyReference.cache
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.pdb

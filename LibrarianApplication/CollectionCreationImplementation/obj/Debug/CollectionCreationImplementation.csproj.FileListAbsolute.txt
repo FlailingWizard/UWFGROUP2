@@ -1,7 +1,0 @@
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationImplementation\bin\Debug\CollectionCreationImplementation.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationImplementation\bin\Debug\CollectionCreationImplementation.pdb
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationImplementation\bin\Debug\CollectionCreationInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationImplementation\bin\Debug\CollectionCreationInterface.pdb
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationImplementation\obj\Debug\CollectionCreationImplementation.csprojResolveAssemblyReference.cache
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationImplementation\obj\Debug\CollectionCreationImplementation.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionCreationImplementation\obj\Debug\CollectionCreationImplementation.pdb

@@ -1,5 +1,0 @@
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\bin\Debug\DocumentDeletionInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\bin\Debug\DocumentDeletionInterface.pdb
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\obj\Debug\DocumentDeletionInterface.csprojResolveAssemblyReference.cache
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\obj\Debug\DocumentDeletionInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentDeletionInterface\obj\Debug\DocumentDeletionInterface.pdb

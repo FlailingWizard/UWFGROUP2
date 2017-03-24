@@ -1,5 +1,0 @@
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionInterface\bin\Debug\CollectionDeletionInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionInterface\bin\Debug\CollectionDeletionInterface.pdb
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionInterface\obj\Debug\CollectionDeletionInterface.csprojResolveAssemblyReference.cache
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionInterface\obj\Debug\CollectionDeletionInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\CollectionDeletionInterface\obj\Debug\CollectionDeletionInterface.pdb

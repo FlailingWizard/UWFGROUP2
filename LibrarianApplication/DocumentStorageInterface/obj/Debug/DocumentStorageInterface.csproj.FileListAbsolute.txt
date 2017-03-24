@@ -1,5 +1,0 @@
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\bin\Debug\DocumentStorageInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\bin\Debug\DocumentStorageInterface.pdb
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.csprojResolveAssemblyReference.cache
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.dll
-D:\Zack\Desktop\Software Engineering 2\Group Project\UWFGROUP2\LibrarianApplication\DocumentStorageInterface\obj\Debug\DocumentStorageInterface.pdb
