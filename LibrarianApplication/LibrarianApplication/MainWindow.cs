@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Diagnostics;
-using System.IO;
 using System.Drawing;
 
 namespace LibrarianApplication
@@ -9,26 +8,28 @@ namespace LibrarianApplication
     public partial class MainWindow : Form
     {
 
-        public enum VIEW_MODE
+        public enum ViewMode
         {
-            COLLECTION_VIEW, DOCUMENT_VIEW
-        }
-        public enum ICONS
-        {
-            // Note: The order here must be the same as the order in which these are loaded to
-            // the imagelist in loadIcons() method.
-            COLLECTION_ICON, DOCUMENT_ICON
+            CollectionView, DocumentView
         }
 
+        public enum Icons
+        {
+            // Note: The order here must match the order in loadIcons()
+            CollectionIcon = 0, DocumentIcon = 1
+        }
+
+        // these filepaths map to the project directory.
         private const string COLLECTION_ICON_FILENAME = "../../collectionIcon.ico";
         private const string DOCUMENT_ICON_FILENAME = "../../documentIcon.ico";
 
         // fields
-        private VIEW_MODE mode;
+        private ViewMode mode;
         private ImageList icons;
-
+        
+        
         // accessors
-        public VIEW_MODE Mode
+        public ViewMode Mode
         {
             get
             {
@@ -53,7 +54,7 @@ namespace LibrarianApplication
         private void MainWindow_Load(object sender, EventArgs e)
         {
             // set default view
-            this.Mode = VIEW_MODE.COLLECTION_VIEW;
+            this.Mode = ViewMode.CollectionView;
 
             // instantiate and load icons
             icons = loadIcons();
@@ -63,8 +64,30 @@ namespace LibrarianApplication
 
         }
 
+        private void listCollections_DoubleClick(object sender, EventArgs e)
+        {
+            // switch to document view for selected document
+
+            if (listCollections.SelectedItems.Count > 0)
+            {
+                setMode(ViewMode.DocumentView);
+            }
+                         
+        }
+        private void listDocuments_DoubleClick(object sender, EventArgs e)
+        {
+            // open the selected document in an external editor
+            if (listDocuments.SelectedItems.Count > 0)
+            {
+                // startExternalEditor(however we get filename of document);
+            }
+
+        }
+
         private void addDocumentClicked(object sender, EventArgs e)
         {
+            debug_AddThingsToList(1);
+
             /*
             int size = -1;
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
@@ -86,6 +109,8 @@ namespace LibrarianApplication
         private void addNewCollectionClicked(object sender, EventArgs e)
         {
             // Add a new folder to the application
+            // show the AddCollection form
+            debug_AddThingsToList(1);
         }
 
         private void mainWindowLayout_Layout(object sender, LayoutEventArgs e)
@@ -101,11 +126,11 @@ namespace LibrarianApplication
         }
 
         // helper methods
-        private void setMode(VIEW_MODE viewMode)
+        private void setMode(ViewMode viewMode)
         {
 
             this.mode = viewMode;
-            if (viewMode == VIEW_MODE.COLLECTION_VIEW)
+            if (viewMode == ViewMode.CollectionView)
             {
                 listCollections.Visible = true;
                 listDocuments.Visible = false;
@@ -116,18 +141,62 @@ namespace LibrarianApplication
                 listDocuments.Visible = true;
             }
 
+            this.Text = $"{Application.ProductName} - " + ((mode == ViewMode.CollectionView) ? "Collection View" : "DocumentView");
+
         }
 
         private ImageList loadIcons()
         {
             ImageList list = new ImageList();
-            // possible exceptions are not caught because we want this to fail if no icon files
+            /* 
+             * Possible exceptions are not caught because we want this to fail if no icon files.
+             * A good improvement to this is to catch the exception and present a FileDialog
+             * for the user to specify where they are. 
+            */
             list.Images.Add(Bitmap.FromFile(COLLECTION_ICON_FILENAME));
             list.Images.Add(Bitmap.FromFile(DOCUMENT_ICON_FILENAME));
             return list;
         }
 
+        private void debug_AddThingsToList(int numberOfThings)
+        {
+            // for debugging:  add items to the current listview
+            Debug.Print($"Adding {numberOfThings.ToString()} items to the active list");
+            for (int i = 0; i < numberOfThings; i++)
+            {
+                ListViewItem newItem = new ListViewItem();
+                newItem.ImageIndex = ((mode == ViewMode.CollectionView) ?
+                    (int)Icons.CollectionIcon : (int)Icons.DocumentIcon);
+                newItem.Text = ((mode == ViewMode.CollectionView) ?
+                    "Collection " : "Document " + i.ToString());
+                listCollections.Items.Add(newItem);
+            }
+
+        }
+
+        private void startExternalEditor(String fileName)
+        {
+            // start the external editor with the specified file open.
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.Arguments = fileName;
+            start.FileName = "notepad.exe";  // no idea if this works
+            start.WindowStyle = ProcessWindowStyle.Normal;
+
+            // start process asynch (don't wait for it)
+            using (Process proc = Process.Start(start))
+            {
+                
+            }
+
+        }
+
+        private void listDocuments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
 
     }
+
+
 }

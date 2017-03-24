@@ -7,3 +7,4 @@ C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\Librari
 C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.csproj.GenerateResource.Cache
 C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.exe
 C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.pdb
+C:\Dropbox\School\UWF\Classes\2017 Spring\CEN3032\GroupProject\UWFGROUP2\LibrarianApplication\LibrarianApplication\obj\Debug\LibrarianApplication.AddCollectionWindow.resources

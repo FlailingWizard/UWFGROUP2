@@ -96,7 +96,7 @@
             // 
             // mainWindowLayout
             // 
-            this.mainWindowLayout.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.mainWindowLayout.BackColor = System.Drawing.SystemColors.Window;
             this.mainWindowLayout.Controls.Add(this.listCollections);
             this.mainWindowLayout.Controls.Add(this.listDocuments);
             this.mainWindowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -112,18 +112,23 @@
             // listCollections
             // 
             this.listCollections.Location = new System.Drawing.Point(5, 5);
+            this.listCollections.MultiSelect = false;
             this.listCollections.Name = "listCollections";
             this.listCollections.Size = new System.Drawing.Size(328, 237);
             this.listCollections.TabIndex = 0;
             this.listCollections.UseCompatibleStateImageBehavior = false;
+            this.listCollections.DoubleClick += new System.EventHandler(this.listCollections_DoubleClick);
             // 
             // listDocuments
             // 
             this.listDocuments.Location = new System.Drawing.Point(5, 248);
+            this.listDocuments.MultiSelect = false;
             this.listDocuments.Name = "listDocuments";
             this.listDocuments.Size = new System.Drawing.Size(179, 119);
             this.listDocuments.TabIndex = 1;
             this.listDocuments.UseCompatibleStateImageBehavior = false;
+            this.listDocuments.SelectedIndexChanged += new System.EventHandler(this.listDocuments_SelectedIndexChanged);
+            this.listDocuments.DoubleClick += new System.EventHandler(this.listDocuments_DoubleClick);
             // 
             // MainWindow
             // 
