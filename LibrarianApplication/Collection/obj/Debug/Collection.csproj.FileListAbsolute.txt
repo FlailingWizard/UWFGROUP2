@@ -1,0 +1,5 @@
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Collection\bin\Debug\Collection.dll
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Collection\bin\Debug\Collection.pdb
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Collection\obj\Debug\Collection.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Collection\obj\Debug\Collection.dll
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\Collection\obj\Debug\Collection.pdb
