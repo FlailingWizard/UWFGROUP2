@@ -32,3 +32,8 @@ LibrarianApplication/LibrarianApplication/bin/Debug/LibrarianApplication.pdb
 LibrarianApplication/LibrarianApplication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.Cache
 LibrarianApplication/LibrarianApplication/obj/Debug/LibrarianApplication.pdb
+*.suo
+LibrarianApplication/LibrarianApplication/bin/Debug/LibrarianApplication.exe.config
+*.cache
+LibrarianApplication/LibrarianApplication/obj/Debug/LibrarianApplication.csproj.FileListAbsolute.txt
+LibrarianApplication/LibrarianApplication/obj/Debug/LibrarianApplication.csproj.FileListAbsolute.txt
