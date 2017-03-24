@@ -1,0 +1,4 @@
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\bin\Debug\CollectionCreationInterface.dll
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\bin\Debug\CollectionCreationInterface.pdb
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.dll
+C:\Users\Chris\Documents\GitHub\UWFGROUP2\LibrarianApplication\CollectionCreationInterface\obj\Debug\CollectionCreationInterface.pdb
