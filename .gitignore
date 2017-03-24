@@ -1,5 +1,8 @@
 LibrarianApplication/LibrarianApplication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 LibrarianApplication/LibrarianApplication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Debug
+/obj
+*/**/obj/Debug
 *.cache
 LibrarianApplication/LibrarianApplication/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 LibrarianApplication/LibrarianApplication.sln
