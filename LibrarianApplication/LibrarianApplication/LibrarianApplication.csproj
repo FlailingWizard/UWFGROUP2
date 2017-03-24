@@ -108,7 +108,6 @@
     <Content Include="Resources\folder.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
@@ -119,7 +118,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-=======
     <ProjectReference Include="..\CollectionCreationImplementation\CollectionCreationImplementation.csproj">
       <Project>{e32ea368-c0ba-4b45-8df8-5b38bb86885e}</Project>
       <Name>CollectionCreationImplementation</Name>
@@ -136,7 +134,6 @@
       <Project>{8c955e2d-6426-4e9a-9599-ff7d46d757ba}</Project>
       <Name>DocumentStorageImplementation</Name>
     </ProjectReference>
->>>>>>> 4c0582a5ab83439f9f13d02a31cd3e7bc956a3e5
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
