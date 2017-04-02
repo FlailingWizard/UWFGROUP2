@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DocumentDeletionImplementation;
-using DocumentStorageImplementation;
-using CollectionCreationImplementation;
-using CollectionDeletionImplementation;
 namespace LibrarianApplication
 {
     static class Program

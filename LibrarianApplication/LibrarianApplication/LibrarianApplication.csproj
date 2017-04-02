@@ -116,22 +116,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-    <ProjectReference Include="..\CollectionCreationImplementation\CollectionCreationImplementation.csproj">
-      <Project>{e32ea368-c0ba-4b45-8df8-5b38bb86885e}</Project>
-      <Name>CollectionCreationImplementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CollectionDeletionImplementation\CollectionDeletionImplementation.csproj">
-      <Project>{15d4e2d5-e664-4107-a2f6-6bbbfbc6e2f0}</Project>
-      <Name>CollectionDeletionImplementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DocumentDeletionImplementation\DocumentDeletionImplementation.csproj">
-      <Project>{ce02dc57-9d59-4ac3-8499-2542edf6d2f2}</Project>
-      <Name>DocumentDeletionImplementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DocumentStorageImplementation\DocumentStorageImplementation.csproj">
-      <Project>{8c955e2d-6426-4e9a-9599-ff7d46d757ba}</Project>
-      <Name>DocumentStorageImplementation</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Previous_grey.ico" />
