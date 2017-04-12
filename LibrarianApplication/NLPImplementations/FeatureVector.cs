@@ -58,12 +58,12 @@ namespace NLPImplementations
 
             //calculate magnitudeproduct
             double magProduct = magnitude() * compareVector.magnitude();
-            if (magProduct == 0)
+            if (magProduct == 0) // protect against divide-by-zero
             {
                 throw new ArgumentOutOfRangeException("magnitude can't be zero");
             }
 
-            double angle = Math.Acos(dotProduct / magProduct);
+            double angle = dotProduct / magProduct;
             return angle;
         }
 
