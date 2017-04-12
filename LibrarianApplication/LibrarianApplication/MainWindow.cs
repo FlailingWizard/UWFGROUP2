@@ -28,10 +28,6 @@ namespace LibrarianApplication
             CollectionIcon = 0, DocumentIcon = 1
         }
 
-        // these filepaths map to the project directory.
-        private const string COLLECTION_ICON_FILENAME = "../../collectionIcon.ico";
-        private const string DOCUMENT_ICON_FILENAME = "../../documentIcon.ico";
-
         // fields
         private ViewMode mode;
         private ImageList icons;
@@ -82,7 +78,7 @@ namespace LibrarianApplication
 
         private void debug_AddThingsToList(int numberOfThings)
         {
-            // for debugging:  add items to the current listview
+            // for debugging only:  add items to the current listview
             Debug.Print($"Adding {numberOfThings.ToString()} items to the active list");
             for (int i = 0; i < numberOfThings; i++)
             {
@@ -111,10 +107,10 @@ namespace LibrarianApplication
             start.FileName = "notepad.exe";  // no idea if this works
             start.WindowStyle = ProcessWindowStyle.Normal;
 
-            // start process asynch (don't wait for it)
+            // start async
             using (Process proc = Process.Start(start))
             {
-
+                // nothing goes here
             }
 
         }
