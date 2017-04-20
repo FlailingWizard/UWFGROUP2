@@ -3,13 +3,17 @@ using System.IO;
 using Console = System.Console;
 using edu.stanford.nlp.simple;
 using edu.stanford.nlp.trees;
+using java.util;
+using System.Collections.Generic;
+
+
 
 
 /*
  * 
  */
 
-namespace NLPTester
+namespace NLPImplementations
 {
     public class NLPWrapper
     {
@@ -61,9 +65,9 @@ namespace NLPTester
             }
         }
 
-        public void analyzeText(String text)
+        public List<string> analyzeText(String text)
         {
-
+            List<string> realTags = new List<string>();
             switchToModelsDirectory();
 
             // run the parser on each sentence
@@ -72,10 +76,18 @@ namespace NLPTester
             {
                 //send the results of this sentence to some handler
                 Tree parseTree = doc.sentence(i).parse();
-                Console.WriteLine(parseTree.toString());
+                List posTags = doc.sentence(i).posTags();
+
+                for (int j = 0; j < posTags.size(); j++)
+                {
+                    realTags.Add((string)(posTags.get(j).ToString()));
+                    Console.WriteLine(realTags[j]);
+                }
+ 
             }
 
             switchToPreviousDirectory();
+            return realTags;
         }
     }
 }
