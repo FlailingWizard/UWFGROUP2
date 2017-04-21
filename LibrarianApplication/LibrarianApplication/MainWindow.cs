@@ -3,7 +3,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-
+using CollectionImplementation;
+using CollectionInterfaces;
+using DocumentInterfaces;
+using DocumentImplementation;
 namespace LibrarianApplication
 {
 
@@ -157,20 +160,25 @@ namespace LibrarianApplication
         {
             // Add a new folder to the application
             // show the AddCollection form
+            
+            //Undo these comments to make it work. I'm gonna keep working on it to make it work better.
+            CollectionCreation coll = new CollectionCreation();
+            //coll.createColl("C:\\Users\\Public\\c");
             debug_AddThingsToList(1); // this is for testing
         }
 
         private void addDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             debug_AddThingsToList(1);
-
+            string file;
+            string fileDestination = @"C:\Users\Public";
             OpenFileDialog fileDialog = new OpenFileDialog();
 
             int size = -1;
             DialogResult result = fileDialog.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {
-                string file = fileDialog.FileName;
+                file = fileDialog.FileName;
                 try
                 {
                     /*  Zack:
@@ -193,8 +201,12 @@ namespace LibrarianApplication
                 catch (IOException)
                 {
                 }
+                
+                DocumentCreation docs = new DocumentCreation();
+               // docs.storeDoc(file, fileDestination);
             }
 
+            
             // Call method to send to add document here
             // The file variable holds the file path of the document the user wants to import
         }

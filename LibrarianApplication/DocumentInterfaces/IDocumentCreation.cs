@@ -8,6 +8,6 @@ namespace DocumentInterfaces
 {
     public interface IDocumentCreation
     {
-        String storeDoc(String fileName, String sourcePath, String targetPath);
+        String storeDoc(String sourcePath, String targetPath);
     }
 }

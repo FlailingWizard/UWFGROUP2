@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -131,6 +131,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CollectionImplementation\CollectionImplementation.csproj">
+      <Project>{52bafbb5-d244-4bbd-99c4-b972b1cef651}</Project>
+      <Name>CollectionImplementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CollectionInterfaces\CollectionInterfaces.csproj">
+      <Project>{92328e90-0ee6-447a-b5a7-771d75f05501}</Project>
+      <Name>CollectionInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DocumentImplementation\DocumentImplementation.csproj">
+      <Project>{2f086161-cda9-4ee3-81b7-9cfbcbdadf93}</Project>
+      <Name>DocumentImplementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DocumentInterfaces\DocumentInterfaces.csproj">
+      <Project>{58a0f42f-1df2-4f21-adb8-188f59855920}</Project>
+      <Name>DocumentInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

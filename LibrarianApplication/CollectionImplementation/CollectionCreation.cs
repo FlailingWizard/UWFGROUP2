@@ -11,9 +11,10 @@ namespace CollectionImplementation
     {
         public string createColl(String targetPath)
         {
+            
             if (!System.IO.Directory.Exists(targetPath))
             {
-                System.IO.Directory.CreateDirectory(targetPath);
+                System.IO.Directory.CreateDirectory(targetPath + "test");
                 return targetPath;
             }
             else if (System.IO.Directory.Exists(targetPath))
