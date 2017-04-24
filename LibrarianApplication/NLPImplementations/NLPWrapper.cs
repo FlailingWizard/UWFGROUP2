@@ -74,8 +74,7 @@ namespace NLPImplementations
             Document doc = new Document(text);
             for (int i = 0; i < doc.sentences().size(); i++)
             {
-                //send the results of this sentence to some handler
-                Tree parseTree = doc.sentence(i).parse();
+
                 List posTags = doc.sentence(i).posTags();
 
                 for (int j = 0; j < posTags.size(); j++)

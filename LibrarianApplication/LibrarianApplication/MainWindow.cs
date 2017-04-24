@@ -3,10 +3,15 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
+
 using CollectionImplementation;
 using CollectionInterfaces;
 using DocumentInterfaces;
 using DocumentImplementation;
+using NLPImplementations;
+using NLPInterfaces;
+
 namespace LibrarianApplication
 {
 
@@ -164,12 +169,12 @@ namespace LibrarianApplication
             //Undo these comments to make it work. I'm gonna keep working on it to make it work better.
             CollectionCreation coll = new CollectionCreation();
             //coll.createColl("C:\\Users\\Public\\c");
-            debug_AddThingsToList(1); // this is for testing
+            //debug_AddThingsToList(1); // this is for testing the UI
         }
 
         private void addDocumentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            debug_AddThingsToList(1);
+            //debug_AddThingsToList(1); // this is for testing the UI
             string file;
             string fileDestination = @"C:\Users\Public";
             OpenFileDialog fileDialog = new OpenFileDialog();
@@ -181,20 +186,7 @@ namespace LibrarianApplication
                 file = fileDialog.FileName;
                 try
                 {
-                    /*  Zack:
-                     *  if you are just testing to see if the file exists, a better way is
-                     *  
-                     *  boolean isFileExisting = System.IO.File.Exists(file);
-                     *  
-                     *  which you can use as a test like:
-                     *  
-                     *  if (System.IO.File.Exists(file)) {
-                     *      // do something
-                     *  }
-                     *  
-                     *  if the file doesn't exist it won't throw an exception you have to catch
-                     *  
-                    */
+
                     string text = File.ReadAllText(file);
                     size = text.Length;
                 }
@@ -221,6 +213,49 @@ namespace LibrarianApplication
         {
             // enable search button only if text in textbox
             searchButton.Enabled = (searchBox.Text.Length != 0);
+        }
+
+        // DEBUGGING MENU OPTIONS
+
+        private void showGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // debugging method.
+            // this creates a featurevector and opens the graph window to
+            // display a graph.
+
+            // create a random vector for testing
+            FeatureVector vector = new FeatureVector();
+            for (int i = 0; i < 10; i++)
+            {
+                vector.addValue((double)i);
+            }
+
+            VectorGraph debugWindow = new VectorGraph(vector);
+            debugWindow.Visible = true;
+        }
+
+        private void showMultiGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // debugging method.
+            // this creates a few featurevectors and opens the graph window to
+            // display a graph of them.
+
+            // create random vectors for testing
+            Random rndNum = new Random();
+            List<IFeatureVector> vectors = new List<IFeatureVector>();
+
+            for (int i = 0; i < 4; i++) // for each vector
+            {
+                IFeatureVector vector = new FeatureVector();
+                for (int j = 0; j < 10; j++)    // for each scalar
+                {
+                    vector.addValue(rndNum.NextDouble() * 50);
+                }
+                vectors.Add(vector);
+            }
+
+            VectorGraph debugWindow = new VectorGraph(vectors);
+            debugWindow.Visible = true;
         }
     }
 

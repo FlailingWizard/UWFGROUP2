@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -59,6 +59,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +77,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VectorGraph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorGraph.Designer.cs">
+      <DependentUpon>VectorGraph.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCollectionWindow.resx">
       <DependentUpon>AddCollectionWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +99,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VectorGraph.resx">
+      <DependentUpon>VectorGraph.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -148,6 +158,14 @@
     <ProjectReference Include="..\DocumentInterfaces\DocumentInterfaces.csproj">
       <Project>{58a0f42f-1df2-4f21-adb8-188f59855920}</Project>
       <Name>DocumentInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NLPImplementations\NLPImplementations.csproj">
+      <Project>{d81b274c-6547-4a5c-92e7-b88afee112a9}</Project>
+      <Name>NLPImplementations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NLPInterfaces\NLPInterfaces.csproj">
+      <Project>{746f3b42-bcb8-4d83-a3d5-5905ea46dca6}</Project>
+      <Name>NLPInterfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

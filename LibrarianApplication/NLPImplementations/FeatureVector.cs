@@ -8,7 +8,7 @@ namespace NLPImplementations
     public class FeatureVector : IFeatureVector
     {
         private List<double> scalars;
-        
+       
         public int count()
         {
             return scalars.Count();
@@ -50,13 +50,13 @@ namespace NLPImplementations
 
             double dotProduct = 0;
 
-            //calculate dot product
+            // calculate dot product
             for (int i = 0; i < compareVector.count(); i++)
             {
                 dotProduct += scalars[i] + compareVector.getValue(i);
             }
 
-            //calculate magnitudeproduct
+            // calculate magnitudeproduct
             double magProduct = magnitude() * compareVector.magnitude();
             if (magProduct == 0) // protect against divide-by-zero
             {
@@ -66,6 +66,8 @@ namespace NLPImplementations
             double angle = dotProduct / magProduct;
             return angle;
         }
+
+        // process stuff
 
     }
 }

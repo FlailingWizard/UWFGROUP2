@@ -32,6 +32,9 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewCollectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDocumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listCollections = new System.Windows.Forms.ListView();
             this.listDocuments = new System.Windows.Forms.ListView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -41,6 +44,7 @@
             this.searchBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchButton = new System.Windows.Forms.ToolStripButton();
             this.mainLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.showMultiGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.mainLayout.SuspendLayout();
@@ -50,7 +54,9 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.debugToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -80,6 +86,27 @@
             this.addDocumentToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.addDocumentToolStripMenuItem.Text = "Add Document";
             this.addDocumentToolStripMenuItem.Click += new System.EventHandler(this.addDocumentToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
+            // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showGraphToolStripMenuItem,
+            this.showMultiGraphToolStripMenuItem});
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.debugToolStripMenuItem.Text = "Debug";
+            // 
+            // showGraphToolStripMenuItem
+            // 
+            this.showGraphToolStripMenuItem.Name = "showGraphToolStripMenuItem";
+            this.showGraphToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showGraphToolStripMenuItem.Text = "Show Graph";
+            this.showGraphToolStripMenuItem.Click += new System.EventHandler(this.showGraphToolStripMenuItem_Click);
             // 
             // listCollections
             // 
@@ -163,6 +190,13 @@
             this.mainLayout.TabIndex = 5;
             this.mainLayout.Layout += new System.Windows.Forms.LayoutEventHandler(this.mainLayout_Layout);
             // 
+            // showMultiGraphToolStripMenuItem
+            // 
+            this.showMultiGraphToolStripMenuItem.Name = "showMultiGraphToolStripMenuItem";
+            this.showMultiGraphToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showMultiGraphToolStripMenuItem.Text = "Show MultiGraph";
+            this.showMultiGraphToolStripMenuItem.Click += new System.EventHandler(this.showMultiGraphToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +236,10 @@
         private System.Windows.Forms.ToolStripButton backButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.FlowLayoutPanel mainLayout;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showGraphToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showMultiGraphToolStripMenuItem;
     }
 }
 
