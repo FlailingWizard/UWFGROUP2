@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarianApplication", "Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrarianApplication", "TestLibrarianApplication\TestLibrarianApplication.csproj", "{8ADDF1D0-1D65-4DF8-9271-709C97F1280E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document", "Document\Document.csproj", "{5A910506-8192-4EFA-B57B-AAF85C2D0F01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents", "Document\Documents.csproj", "{5A910506-8192-4EFA-B57B-AAF85C2D0F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collection", "Collection\Collection.csproj", "{8F2F0550-0A52-46E7-98D7-9D4672CC5BD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collection\Collections.csproj", "{8F2F0550-0A52-46E7-98D7-9D4672CC5BD5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionImplementation", "CollectionImplementation\CollectionImplementation.csproj", "{52BAFBB5-D244-4BBD-99C4-B972B1CEF651}"
 EndProject

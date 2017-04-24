@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLPInterfaces;
-
+using Documents;
 namespace NLPImplementations
 {
     public class FeatureVector : IFeatureVector
@@ -67,7 +67,29 @@ namespace NLPImplementations
             return angle;
         }
 
-        // process stuff
+        public List<int> prep(Document doc)
+        {
+            NLPWrapper wrap = new NLPWrapper();
+            ADJTagger adj = new ADJTagger();
+            adverbTagger adv = new adverbTagger();
+            CONJTagger conj = new CONJTagger();
+            nounTagger noun = new nounTagger();
+            verbTagger verb = new verbTagger();
+            pronounTagger pro = new pronounTagger();
+            List<int> vectors = new List<int>();
+            string[] lines = System.IO.File.ReadAllLines(@doc.getTargetPath());
+            foreach (string line in lines)
+            {
+                List<String> realTags = wrap.analyzeText(line);
+                vectors[1] += adj.tagPOS(realTags);
+                vectors[2] += adv.tagPOS(realTags);
+                vectors[3] += conj.tagPOS(realTags);
+                vectors[4] += noun.tagPOS(realTags);
+                vectors[5] += verb.tagPOS(realTags);
+                vectors[6] += pro.tagPOS(realTags);
+            }
+            return vectors;
+        }
 
     }
 }

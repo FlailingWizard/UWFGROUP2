@@ -4,20 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Document
+namespace Documents
 {
-    class Document
+    public class Document
     {
         private String fileName;
-        private String[] tags;
+        private List<int> vectors;
         private String targetPath;
-        public Document(String fileName, String[] tags, String targetPath)
+        public Document(String fileName, List<int> vectors, String targetPath)
         {
             this.fileName = fileName;
-            this.tags = tags;
+            this.vectors = vectors;
             this.targetPath = targetPath;
 
         }
-        
+        public String getTargetPath()
+        {
+            return targetPath;
+        }
+        public List<int> getVectors()
+        {
+            return vectors;
+        }
+        public void setVectors(List<int> vectors)
+        {
+            this.vectors = vectors;
+        }
+
     }
 }
