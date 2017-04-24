@@ -8,6 +8,6 @@ namespace NLPInterfaces
 {
     public interface IPOSTagger
     {
-        int tagPOS(List<string> posTags);
+        double tagPOS(List<string> posTags);
     }
 }

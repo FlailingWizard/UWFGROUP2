@@ -13,7 +13,10 @@ namespace NLPImplementations
         {
             return scalars.Count();
         }
-
+        public void setScalars(List<double> scalars)
+        {
+            this.scalars = scalars;
+        }
         public void addValue(double value)
         {
             scalars.Add(value);
@@ -67,7 +70,7 @@ namespace NLPImplementations
             return angle;
         }
 
-        public List<int> prep(Document doc)
+        public List<double> prep(Document doc)
         {
             NLPWrapper wrap = new NLPWrapper();
             ADJTagger adj = new ADJTagger();
@@ -76,7 +79,7 @@ namespace NLPImplementations
             nounTagger noun = new nounTagger();
             verbTagger verb = new verbTagger();
             pronounTagger pro = new pronounTagger();
-            List<int> vectors = new List<int>();
+            List<double> vectors = new List<double>();
             string[] lines = System.IO.File.ReadAllLines(@doc.getTargetPath());
             foreach (string line in lines)
             {
@@ -88,6 +91,7 @@ namespace NLPImplementations
                 vectors[5] += verb.tagPOS(realTags);
                 vectors[6] += pro.tagPOS(realTags);
             }
+            doc.setVectors(vectors);
             return vectors;
         }
 

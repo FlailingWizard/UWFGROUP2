@@ -22,7 +22,8 @@ namespace DocumentImplementation
             for (int i = 0; i < collNum; i++)
             {
                 //logic to pull the collection
-                //angle = (collectionpulled.getVector()).similarity(doc.getVectors())
+                //vector.setScalars(pulledcollection.getVectors());
+                //angle = vector.similarity(doc.getVectors())
                 if (angle < lowestAngle)
                 {
                     lowestAngle = angle;

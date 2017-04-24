@@ -8,9 +8,9 @@ namespace NLPImplementations
 {
     public class nounTagger:IPOSTagger
     {
-        public int tagPOS(List<string> posTags)
+        public double tagPOS(List<string> posTags)
         {
-            int counter = 0;
+            double counter = 0;
             for (int i = 0; i < posTags.Count(); i++)
             {
                 if (posTags[i].Equals("NN"))
@@ -32,6 +32,7 @@ namespace NLPImplementations
 
             }
             Console.WriteLine(counter);
+            counter = counter / (posTags.Count());
             return counter;
         }
     }

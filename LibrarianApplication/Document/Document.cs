@@ -9,9 +9,9 @@ namespace Documents
     public class Document
     {
         private String fileName;
-        private List<int> vectors;
+        private List<double> vectors;
         private String targetPath;
-        public Document(String fileName, List<int> vectors, String targetPath)
+        public Document(String fileName, List<double> vectors, String targetPath)
         {
             this.fileName = fileName;
             this.vectors = vectors;
@@ -22,11 +22,11 @@ namespace Documents
         {
             return targetPath;
         }
-        public List<int> getVectors()
+        public List<double> getVectors()
         {
             return vectors;
         }
-        public void setVectors(List<int> vectors)
+        public void setVectors(List<double> vectors)
         {
             this.vectors = vectors;
         }

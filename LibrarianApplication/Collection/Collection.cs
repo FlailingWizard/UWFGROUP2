@@ -9,9 +9,9 @@ namespace Collections
     public class Collection
     {
         private String CollectionName;
-        private List<int> vectors;
+        private List<double> vectors;
         private String targetPath;
-        public Collection(String CollectionName, List<int> vectors, String targetPath)
+        public Collection(String CollectionName, List<double> vectors, String targetPath)
         {
             this.CollectionName = CollectionName;
             this.vectors = vectors;
@@ -22,11 +22,11 @@ namespace Collections
         {
             return targetPath;
         }
-        public List<int> getVectors()
+        public List<double> getVectors()
         {
             return vectors;
         }
-        public void setVectors(List<int> vectors)
+        public void setVectors(List<double> vectors)
         {
             this.vectors = vectors;
         }
