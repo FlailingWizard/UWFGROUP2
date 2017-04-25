@@ -7,12 +7,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
+using Collections;
+using Documents;
 
 namespace ApplicationStorageImplementation
 {
     public class ApplicationStorage
     {
-        //XmlTextReader textReader = new XmlTextReader("\LibrarianApplication\ApplicationStorage.xml");
 
         /**
          * Checks if a xml file exists when creating new storage class
@@ -32,9 +33,6 @@ namespace ApplicationStorageImplementation
         public bool checkIfSaveExisits()
         {
             String saveFilePath = getBaseDirectory() + "saveFile.xml";
-
-            Debug.WriteLine(saveFilePath);  // For testing
-
 
             bool exists = File.Exists(saveFilePath);
 
@@ -62,5 +60,27 @@ namespace ApplicationStorageImplementation
             saveFile.Save(getBaseDirectory() + "saveFile.xml");
         }
 
-   }
+        public void saveNewCollection(Collection collection)
+        {
+            // Save new collection in xml here
+        }
+
+        public void saveNewDocument(Document document)
+        {
+            // Save new document in xml here
+        }
+
+        public void deleteCollection(Collection collection)
+        {
+            // Delete collection in xml here
+        }
+
+        public void deleteDocument(Document document)
+        {
+            // Delete document in xml here
+        }
+
+
+
+    }
 }

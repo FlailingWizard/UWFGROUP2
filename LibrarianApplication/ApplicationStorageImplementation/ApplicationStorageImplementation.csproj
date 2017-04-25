@@ -43,6 +43,16 @@
     <Compile Include="ApplicationStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Collection\Collections.csproj">
+      <Project>{8f2f0550-0a52-46e7-98d7-9d4672cc5bd5}</Project>
+      <Name>Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Document\Documents.csproj">
+      <Project>{5a910506-8192-4efa-b57b-aaf85c2d0f01}</Project>
+      <Name>Documents</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
