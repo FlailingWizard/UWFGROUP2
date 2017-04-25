@@ -15,7 +15,7 @@ namespace CollectionImplementation
         // allowing modifications to the name is not supported
         private IFeatureVector Vector { get; set; }
         private string TargetPath { get; }
-        private List<IDocument> documents;
+        public List<IDocument> documents { get; }
 
         private const bool DeleteRecursively = true;
 
@@ -78,17 +78,17 @@ namespace CollectionImplementation
 
         public int count()
         {
-            throw new NotImplementedException();
+            return documents.Count;
         }
 
-        public void addDocument()
+        public void addDocument(IDocument document)
         {
-            throw new NotImplementedException();
+            documents.Add(document);
         }
 
-        public void removeDocument()
+        public void removeDocument(IDocument document)
         {
-            throw new NotImplementedException();
+            documents.Remove(document);
         }
     }
 }

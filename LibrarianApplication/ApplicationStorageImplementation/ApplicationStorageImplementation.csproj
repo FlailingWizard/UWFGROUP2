@@ -36,12 +36,21 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationStorage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CollectionInterfaces\CollectionInterfaces.csproj">
+      <Project>{92328e90-0ee6-447a-b5a7-771d75f05501}</Project>
+      <Name>CollectionInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DocumentInterfaces\DocumentInterfaces.csproj">
+      <Project>{58a0f42f-1df2-4f21-adb8-188f59855920}</Project>
+      <Name>DocumentInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

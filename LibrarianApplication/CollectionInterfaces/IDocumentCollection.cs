@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using DocumentInterfaces;
+
 namespace CollectionInterfaces
 {
     public interface IDocumentCollection
     {
 
         int count();
-        void addDocument();
-        void removeDocument();
+        void addDocument(IDocument document);
+        void removeDocument(IDocument document);
 
 
     }
