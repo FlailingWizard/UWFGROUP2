@@ -37,6 +37,7 @@ namespace LibrarianApplication
                 series.Name = "Vector " + vectorCount++;
                 series = seriesFromVector(vector);
                 chart1.Series.Add(series);
+
             }
 
         }
@@ -46,9 +47,10 @@ namespace LibrarianApplication
 
             // create and populate data series
             Series scalars = new Series();
+            scalars.XValueType = ChartValueType.String;
             for (int i = 0; i < vector.scalarCount(); i++)
             {
-                scalars.Points.AddXY(i,vector.getValue(i));
+                scalars.Points.AddXY(i,vector.getScalarValue(i));
             }
 
             return scalars;

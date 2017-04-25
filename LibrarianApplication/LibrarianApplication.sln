@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibrarianApplication", "Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrarianApplication", "TestLibrarianApplication\TestLibrarianApplication.csproj", "{8ADDF1D0-1D65-4DF8-9271-709C97F1280E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documents", "Document\Documents.csproj", "{5A910506-8192-4EFA-B57B-AAF85C2D0F01}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collection\Collections.csproj", "{8F2F0550-0A52-46E7-98D7-9D4672CC5BD5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionImplementation", "CollectionImplementation\CollectionImplementation.csproj", "{52BAFBB5-D244-4BBD-99C4-B972B1CEF651}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionInterfaces", "CollectionInterfaces\CollectionInterfaces.csproj", "{92328E90-0EE6-447A-B5A7-771D75F05501}"
@@ -20,8 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentInterfaces", "DocumentInterfaces\DocumentInterfaces.csproj", "{58A0F42F-1DF2-4F21-ADB8-188F59855920}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentUnitTesting", "DocumentUnitTesting\DocumentUnitTesting.csproj", "{BF90D731-8D21-4348-A92D-26D6693986DC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionUnitTesting", "CollectionUnitTesting\CollectionUnitTesting.csproj", "{076A5139-72AA-4886-9667-D5D837B79A0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLPInterfaces", "NLPInterfaces\NLPInterfaces.csproj", "{746F3B42-BCB8-4D83-A3D5-5905EA46DCA6}"
 EndProject
@@ -43,14 +37,6 @@ Global
 		{8ADDF1D0-1D65-4DF8-9271-709C97F1280E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADDF1D0-1D65-4DF8-9271-709C97F1280E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADDF1D0-1D65-4DF8-9271-709C97F1280E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A910506-8192-4EFA-B57B-AAF85C2D0F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A910506-8192-4EFA-B57B-AAF85C2D0F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A910506-8192-4EFA-B57B-AAF85C2D0F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A910506-8192-4EFA-B57B-AAF85C2D0F01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F2F0550-0A52-46E7-98D7-9D4672CC5BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F2F0550-0A52-46E7-98D7-9D4672CC5BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F2F0550-0A52-46E7-98D7-9D4672CC5BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F2F0550-0A52-46E7-98D7-9D4672CC5BD5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{52BAFBB5-D244-4BBD-99C4-B972B1CEF651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52BAFBB5-D244-4BBD-99C4-B972B1CEF651}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52BAFBB5-D244-4BBD-99C4-B972B1CEF651}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,10 +57,6 @@ Global
 		{BF90D731-8D21-4348-A92D-26D6693986DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF90D731-8D21-4348-A92D-26D6693986DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF90D731-8D21-4348-A92D-26D6693986DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{076A5139-72AA-4886-9667-D5D837B79A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{076A5139-72AA-4886-9667-D5D837B79A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{076A5139-72AA-4886-9667-D5D837B79A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{076A5139-72AA-4886-9667-D5D837B79A0B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{746F3B42-BCB8-4D83-A3D5-5905EA46DCA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{746F3B42-BCB8-4D83-A3D5-5905EA46DCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{746F3B42-BCB8-4D83-A3D5-5905EA46DCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU

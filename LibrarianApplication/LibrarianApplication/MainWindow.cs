@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
-
-using CollectionImplementation;
-using CollectionInterfaces;
-using DocumentInterfaces;
-using DocumentImplementation;
 using NLPImplementations;
 using NLPInterfaces;
 
@@ -165,10 +159,7 @@ namespace LibrarianApplication
         {
             // Add a new folder to the application
             // show the AddCollection form
-            
-            //Undo these comments to make it work. I'm gonna keep working on it to make it work better.
-            CollectionCreation coll = new CollectionCreation();
-            //coll.createColl("C:\\Users\\Public\\c");
+
             //debug_AddThingsToList(1); // this is for testing the UI
         }
 
@@ -193,9 +184,7 @@ namespace LibrarianApplication
                 catch (IOException)
                 {
                 }
-                
-                DocumentCreation docs = new DocumentCreation();
-               // docs.storeDoc(file, fileDestination);
+
             }
 
             
@@ -224,15 +213,17 @@ namespace LibrarianApplication
             // display a graph.
 
             // create a random vector for testing
-            FeatureVector vector = new FeatureVector();
-            for (int i = 0; i < 10; i++)
-            {
-                vector.addValue((double)i);
-            }
-
+            string testText = $"This is a test of the feature vector, just to see what it does.";
+            FeatureVector vector = new FeatureVector(testText);
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    vector.addScalarValue((double)i);
+            //}
+            vector.process();
             VectorGraph debugWindow = new VectorGraph(vector);
             debugWindow.Visible = true;
         }
+
 
         private void showMultiGraphToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -246,10 +237,10 @@ namespace LibrarianApplication
 
             for (int i = 0; i < 4; i++) // for each vector
             {
-                IFeatureVector vector = new FeatureVector();
+                IFeatureVector vector = new FeatureVector(null);
                 for (int j = 0; j < 10; j++)    // for each scalar
                 {
-                    vector.addValue(rndNum.NextDouble() * 50);
+                    vector.addScalarValue(rndNum.NextDouble() * 50);
                 }
                 vectors.Add(vector);
             }

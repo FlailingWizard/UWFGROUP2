@@ -11,29 +11,26 @@ namespace NLPImplementations
     public class posCounter : IFeatureCalculator
     {
 
-        private String partOfSpeech;
+        private string partOfSpeech { get; set; }
+        public string Name { get; set; }
 
-        public static posCounter create(String partOfSpeech)
-        {
-            return new posCounter(partOfSpeech);
-        }
-
-        public posCounter(String partOfSpeech)
+        public posCounter(string partOfSpeech, string name)
         {
             this.partOfSpeech = partOfSpeech;
+            this.Name = name;
         }
 
         public double calculate(List<string> posTags)
         {
-            int counter = 0;
-            foreach (String tag in posTags)
+            double counter = 0;
+            foreach (string tag in posTags)
             {
                 if (tag.StartsWith(partOfSpeech))
                 {
                     counter++;
                 }
             }
-            return counter;
+            return counter/posTags.Count;
         }
 
     }

@@ -9,10 +9,10 @@ namespace DocumentImplementation
     public class Document : IDocument, IVectorized
     {
 
-        private string name;
+        private string Name { get; }
+        private string targetPath; // this should always be the full path to the file (including filename)
         private IFeatureVector vector { get; set; }
-        private string targetPath; // this should always be the full path to the file (including name)
-
+        
         private const bool OverwriteTargetFile = true;
 
         public string TargetPath
@@ -34,7 +34,7 @@ namespace DocumentImplementation
 
         public Document(string name, string targetPath, IFeatureVector vector)
         {
-            this.name = name;
+            this.Name = name;
             this.TargetPath = targetPath;
             this.vector = vector; 
             

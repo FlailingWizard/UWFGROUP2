@@ -8,6 +8,7 @@ namespace NLPInterfaces
 {
     public interface IFeatureVector
     {
+        List<IFeatureCalculator> calculators { get; }
         int scalarCount();
         void addScalarValue(double value);
         double getScalarValue(int index);
@@ -17,5 +18,7 @@ namespace NLPInterfaces
 
         double magnitude();
         double similarity(IFeatureVector compareVector);
+
+        void process();
     }
 }

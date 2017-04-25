@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace CollectionInterfaces
 {
-    public interface ICollectionCreation
+    public interface IDocumentCollection
     {
-        string createColl(String targetPath);
+
+        int count();
+        void addDocument();
+        void removeDocument();
+
+
     }
 }

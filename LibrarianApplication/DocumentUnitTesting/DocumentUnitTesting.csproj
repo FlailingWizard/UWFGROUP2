@@ -52,7 +52,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DocumentUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

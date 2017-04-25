@@ -23,7 +23,8 @@ namespace NLPImplementations
         private const string partOfSpeechAdverb = "RB";
 
         private List<double> scalars;
-        private List<IFeatureCalculator> calculators;
+        public List<IFeatureCalculator> calculators { get; }
+        private string Text { get; set; }
         private bool calcDone;
 
         // accessors       
@@ -56,8 +57,10 @@ namespace NLPImplementations
         
         public FeatureVector(string text)
         {
+            this.Text = text;
             scalars = new List<double>();
             calcDone = false;
+            calculators = new List<IFeatureCalculator>();
             createDefaultCalculators();
         }
 
@@ -76,6 +79,12 @@ namespace NLPImplementations
         public double similarity(IFeatureVector compareVector)
         {
 
+            if (!calcDone)
+            {
+                process();
+            }
+                
+            
             // check if both vectors have the same number of elements
             if (compareVector.scalarCount() != this.scalarCount())
             {
@@ -101,12 +110,17 @@ namespace NLPImplementations
             return angle;
         }
 
-        // private methods
-        public void process(string text)
+        public void process()
         {
+
+            if (Text == "" || Text == null)
+            {
+                throw new ArgumentNullException("Text is empty or null");
+            }
+
             NLPWrapper nlp = new NLPWrapper();
 
-            List<string> realTags = nlp.analyzeText(text);
+            List<string> realTags = nlp.analyzeText(Text);
 
             // send the tags to each feature calculator and put result in scalar list
             foreach (IFeatureCalculator featureCalc in calculators)
@@ -123,12 +137,12 @@ namespace NLPImplementations
         /// </summary>
         private void createDefaultCalculators()
         {
-            calculators.Add(posCounter.create(partOfSpeechVerb));
-            calculators.Add(posCounter.create(partOfSpeechNoun));
-            calculators.Add(posCounter.create(partOfSpeechPronoun));
-            calculators.Add(posCounter.create(partOfSpeechConjugate));
-            calculators.Add(posCounter.create(partOfSpeechAdjective));
-            calculators.Add(posCounter.create(partOfSpeechAdverb));
+            calculators.Add(new posCounter(partOfSpeechVerb, "V"));
+            calculators.Add(new posCounter(partOfSpeechNoun, "N"));
+            calculators.Add(new posCounter(partOfSpeechPronoun, "P"));
+            calculators.Add(new posCounter(partOfSpeechConjugate, "C"));
+            calculators.Add(new posCounter(partOfSpeechAdjective, "A"));
+            calculators.Add(new posCounter(partOfSpeechAdverb, "AV"));
 
         }
 

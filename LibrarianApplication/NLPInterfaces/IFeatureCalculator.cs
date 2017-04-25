@@ -9,6 +9,6 @@ namespace NLPInterfaces
     public interface IFeatureCalculator
     {
         double calculate(List<string> posTags);
-
+        string Name { get; set; }
     }
 }
