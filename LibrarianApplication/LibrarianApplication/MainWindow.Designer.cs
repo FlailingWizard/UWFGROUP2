@@ -35,6 +35,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showMultiGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listCollections = new System.Windows.Forms.ListView();
             this.listDocuments = new System.Windows.Forms.ListView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -44,7 +45,6 @@
             this.searchBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchButton = new System.Windows.Forms.ToolStripButton();
             this.mainLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.showMultiGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.mainLayout.SuspendLayout();
@@ -108,24 +108,37 @@
             this.showGraphToolStripMenuItem.Text = "Show Graph";
             this.showGraphToolStripMenuItem.Click += new System.EventHandler(this.showGraphToolStripMenuItem_Click);
             // 
+            // showMultiGraphToolStripMenuItem
+            // 
+            this.showMultiGraphToolStripMenuItem.Name = "showMultiGraphToolStripMenuItem";
+            this.showMultiGraphToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showMultiGraphToolStripMenuItem.Text = "Show MultiGraph";
+            this.showMultiGraphToolStripMenuItem.Click += new System.EventHandler(this.showMultiGraphToolStripMenuItem_Click);
+            // 
             // listCollections
             // 
+            this.listCollections.AllowDrop = true;
             this.listCollections.Location = new System.Drawing.Point(3, 3);
             this.listCollections.MultiSelect = false;
             this.listCollections.Name = "listCollections";
             this.listCollections.Size = new System.Drawing.Size(328, 237);
             this.listCollections.TabIndex = 0;
             this.listCollections.UseCompatibleStateImageBehavior = false;
+            this.listCollections.DragDrop += new System.Windows.Forms.DragEventHandler(this.listCollections_DragDrop);
+            this.listCollections.DragEnter += new System.Windows.Forms.DragEventHandler(this.listCollections_DragEnter);
             this.listCollections.DoubleClick += new System.EventHandler(this.listCollections_DoubleClick);
             // 
             // listDocuments
             // 
+            this.listDocuments.AllowDrop = true;
             this.listDocuments.Location = new System.Drawing.Point(337, 3);
             this.listDocuments.MultiSelect = false;
             this.listDocuments.Name = "listDocuments";
             this.listDocuments.Size = new System.Drawing.Size(179, 119);
             this.listDocuments.TabIndex = 1;
             this.listDocuments.UseCompatibleStateImageBehavior = false;
+            this.listDocuments.DragDrop += new System.Windows.Forms.DragEventHandler(this.listDocuments_DragDrop);
+            this.listDocuments.DragEnter += new System.Windows.Forms.DragEventHandler(this.listDocuments_DragEnter);
             this.listDocuments.DoubleClick += new System.EventHandler(this.listDocuments_DoubleClick);
             // 
             // toolStrip1
@@ -181,6 +194,7 @@
             // 
             // mainLayout
             // 
+            this.mainLayout.AllowDrop = true;
             this.mainLayout.Controls.Add(this.listCollections);
             this.mainLayout.Controls.Add(this.listDocuments);
             this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -189,13 +203,6 @@
             this.mainLayout.Size = new System.Drawing.Size(769, 365);
             this.mainLayout.TabIndex = 5;
             this.mainLayout.Layout += new System.Windows.Forms.LayoutEventHandler(this.mainLayout_Layout);
-            // 
-            // showMultiGraphToolStripMenuItem
-            // 
-            this.showMultiGraphToolStripMenuItem.Name = "showMultiGraphToolStripMenuItem";
-            this.showMultiGraphToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.showMultiGraphToolStripMenuItem.Text = "Show MultiGraph";
-            this.showMultiGraphToolStripMenuItem.Click += new System.EventHandler(this.showMultiGraphToolStripMenuItem_Click);
             // 
             // MainWindow
             // 

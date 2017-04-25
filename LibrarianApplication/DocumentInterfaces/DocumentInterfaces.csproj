@@ -40,6 +40,12 @@
     <Compile Include="IDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NLPInterfaces\NLPInterfaces.csproj">
+      <Project>{746f3b42-bcb8-4d83-a3d5-5905ea46dca6}</Project>
+      <Name>NLPInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

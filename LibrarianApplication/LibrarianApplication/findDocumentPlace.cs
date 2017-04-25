@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using DocumentImplementation;
 using System.Xml;
+
 using NLPImplementations;
 using CollectionImplementation;
+
 namespace DocumentImplementation
 {
-    class findDocumentPlace
+    public class findDocumentPlace
     {
-        public void findDocPlace(Document doc)
+        public static void findDocPlace(Document doc)
         {
             XmlTextReader reader = new XmlTextReader("this is our xml");
             int collNum = 0; //logic to pull this from collections

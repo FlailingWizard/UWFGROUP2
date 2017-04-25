@@ -12,9 +12,10 @@ namespace CollectionInterfaces
     {
 
         int count();
+        List<IDocument> documents { get; }
+        string CollectionName { get; }
         void addDocument(IDocument document);
         void removeDocument(IDocument document);
-
 
     }
 }

@@ -8,6 +8,8 @@ namespace NLPInterfaces
 {
     public interface IFeatureVector
     {
+
+        bool calcDone { get; set; }
         List<IFeatureCalculator> calculators { get; }
         int scalarCount();
         void addScalarValue(double value);

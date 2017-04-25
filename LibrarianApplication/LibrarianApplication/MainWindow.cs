@@ -3,8 +3,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using System.Collections.Generic;
+
 using NLPImplementations;
 using NLPInterfaces;
+using DocumentImplementation;
+using DocumentInterfaces;
+using CollectionImplementation;
+using CollectionInterfaces;
 
 namespace LibrarianApplication
 {
@@ -18,6 +23,10 @@ namespace LibrarianApplication
     /// </summary>
     public partial class MainWindow : Form
     {
+
+        // all of our data will live here
+        List<IDocumentCollection> collections;
+        private int activeCollection;   // the index for the collection to display in documentview
 
         public enum ViewMode
         {
@@ -53,21 +62,75 @@ namespace LibrarianApplication
         public MainWindow()
         {
             InitializeComponent();
+            collections = new List<IDocumentCollection>();
         }
 
+        
         // Helper methods
+
+        private string readFile(string targetPath)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(targetPath))
+                {
+                    String text = sr.ReadToEnd();
+                    // validate this stuff before we return it
+                    if (text == "")
+                    {
+                        throw new InvalidDataException($"The file {targetPath} is empty.");
+                    }
+                    return text;
+                }
+            }
+            catch (Exception e)
+            {
+                throw new IOException($"Unable to open file {targetPath}", e);
+            }
+
+        }
 
         private void setMode(ViewMode viewMode)
         {
 
             this.mode = viewMode;
-
+            string windowCaption = $"{Application.ProductName} - ";
             backButton.Enabled = (mode == ViewMode.DocumentView);
             listCollections.Visible = (mode == ViewMode.CollectionView);
             listDocuments.Visible = (mode == ViewMode.DocumentView);
 
-            this.Text = $"{Application.ProductName} - " + ((mode == ViewMode.CollectionView) ? "Collection View" : "DocumentView");
 
+
+            if (viewMode == ViewMode.DocumentView)
+            {
+                // populate the listbox with documents from the collection
+                listDocuments.Clear();
+                foreach (IDocument doc in collections[activeCollection].documents)
+                {
+                    addDocument(doc);
+                }
+                int docCount = collections[activeCollection].documents.Count;
+                windowCaption = windowCaption + $"Viewing documents for collection {collections[activeCollection].CollectionName} ({docCount})";
+            }
+            else
+            {
+                // populate the listbox with collections from our list
+                listCollections.Clear();
+                foreach (IDocumentCollection col in collections)
+                {
+                    addCollection(col);
+                }
+                windowCaption = windowCaption + $"Viewing Collections ({collections.Count})";
+            }
+
+            // sets the caption on the form
+            this.Text = windowCaption;
+
+        }
+
+        private void refreshView()
+        {
+            this.setMode(mode);
         }
 
         private ImageList loadIcons()
@@ -101,7 +164,7 @@ namespace LibrarianApplication
 
         }
 
-        private void startExternalEditor(String fileName)
+        private void startExternalEditor(string fileName)
         {
             // start the external editor with the specified file open.
             ProcessStartInfo start = new ProcessStartInfo();
@@ -116,6 +179,96 @@ namespace LibrarianApplication
             }
 
         }
+
+        private void addCollection(IDocumentCollection col)
+        {
+            ListViewItem newItem = new ListViewItem();
+            newItem.ImageIndex = (int)Icons.CollectionIcon;
+            newItem.Text = col.CollectionName;
+            listCollections.Items.Add(newItem);
+        }
+
+        private void addDocument(IDocument doc)
+        {
+            ListViewItem newItem = new ListViewItem();
+            newItem.ImageIndex = (int)Icons.DocumentIcon;
+            newItem.Text = doc.Name;
+            listDocuments.Items.Add(newItem);
+        }
+
+        private void handle_DragDrop(DragEventArgs e)
+        {
+
+            List<string> files = new List<string>((string[])e.Data.GetData(DataFormats.FileDrop));
+
+            // the action we take is based on which mode we are in right now
+            if (this.mode == ViewMode.CollectionView)
+            {
+                // assume they want to create a collection from the document
+
+                string message = $"Create a new collection from the document {files[0]}?";
+                string caption = "New Collection";
+
+                DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    // create collection
+                    string path = files[0];
+                    newCollection(path);
+                    
+                }
+
+            }
+            else
+            {
+                // assume they want to add this document to a collection
+                string message = $"Add the document {files[0]}?";
+                string caption = "New Document";
+
+                DialogResult result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    // create document
+                    string filePath = files[0];
+                    string name = Path.GetFileNameWithoutExtension(filePath);
+                    IDocument doc = new Document(name, filePath, new FeatureVector(readFile(filePath)));
+
+                    // determine which collection to add it to
+
+                }
+            }
+
+            foreach (string filePath in files)
+            {
+                Console.WriteLine(filePath);
+            }
+            // end debug
+
+            // figure out how many files
+
+        }
+
+        private void handle_DragEnter(DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+
+        private void newCollection(string path)
+        {
+
+            collections.Add( new DocumentCollection("DemoCollection", new FeatureVector(readFile(path)), Directory.GetCurrentDirectory()));
+
+            refreshView();
+        }
+
 
         // Form control methods
         /* NOTE:
@@ -140,18 +293,19 @@ namespace LibrarianApplication
             // add the imagelist to both listViews
             listCollections.LargeImageList = listDocuments.LargeImageList = icons;
 
-            
+
         }
 
         private void listCollections_DoubleClick(object sender, EventArgs e)
         {
-            // switch to document view for selected document
+            // switch to document view for selected collection
             setMode(ViewMode.DocumentView);
+
         }
 
         private void listDocuments_DoubleClick(object sender, EventArgs e)
         {
-   
+
             // startExternalEditor(however we get filename of document);
         }
 
@@ -187,7 +341,7 @@ namespace LibrarianApplication
 
             }
 
-            
+
             // Call method to send to add document here
             // The file variable holds the file path of the document the user wants to import
         }
@@ -202,6 +356,27 @@ namespace LibrarianApplication
         {
             // enable search button only if text in textbox
             searchButton.Enabled = (searchBox.Text.Length != 0);
+        }
+
+        private void listCollections_DragDrop(object sender, DragEventArgs e)
+        {
+            // pass control to helper method
+            handle_DragDrop(e);
+        }
+        private void listCollections_DragEnter(object sender, DragEventArgs e)
+        {
+            // pass control to the helper method
+            handle_DragEnter(e);
+        }
+        private void listDocuments_DragDrop(object sender, DragEventArgs e)
+        {
+            // pass control to helper method
+            handle_DragDrop(e);
+        }
+        private void listDocuments_DragEnter(object sender, DragEventArgs e)
+        {
+            // pass control to the helper method
+            handle_DragEnter(e);
         }
 
         // DEBUGGING MENU OPTIONS
@@ -248,6 +423,8 @@ namespace LibrarianApplication
             VectorGraph debugWindow = new VectorGraph(vectors);
             debugWindow.Visible = true;
         }
+
+
     }
 
 

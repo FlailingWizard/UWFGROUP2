@@ -25,7 +25,7 @@ namespace NLPImplementations
         private List<double> scalars;
         public List<IFeatureCalculator> calculators { get; }
         private string Text { get; set; }
-        private bool calcDone;
+        public bool calcDone { get; set; }
 
         // accessors       
         public int scalarCount()
@@ -54,7 +54,7 @@ namespace NLPImplementations
         }
 
         // default constructor
-        
+
         public FeatureVector(string text)
         {
             this.Text = text;
@@ -78,13 +78,18 @@ namespace NLPImplementations
 
         public double similarity(IFeatureVector compareVector)
         {
-
+            // check to make sure the scalars for this vector are calculated
             if (!calcDone)
             {
                 process();
             }
-                
-            
+
+            // check if scalars for the other vector are calculated
+            if (!compareVector.calcDone)
+            {
+                compareVector.process();
+            }
+
             // check if both vectors have the same number of elements
             if (compareVector.scalarCount() != this.scalarCount())
             {

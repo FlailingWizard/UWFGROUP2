@@ -11,7 +11,7 @@ namespace CollectionImplementation
 {
     public class DocumentCollection : IDocumentCollection
     {
-        private string CollectionName { get; }
+        public string CollectionName { get; }
         // allowing modifications to the name is not supported
         private IFeatureVector Vector { get; set; }
         private string TargetPath { get; }
@@ -21,6 +21,7 @@ namespace CollectionImplementation
 
         public DocumentCollection(string collectionName, IFeatureVector vector, string targetPath)
         {
+            Console.WriteLine($"New collection: ({collectionName},{targetPath})");
             this.CollectionName = collectionName;
             this.Vector = vector;
             this.TargetPath = targetPath;
@@ -28,7 +29,10 @@ namespace CollectionImplementation
             create();
         }
 
-
+        private string getPath()
+        {
+            return TargetPath + @"\" + CollectionName;
+        }
 
         /// <summary>
         /// This creates a new directory for the collection, if necessary.
@@ -38,18 +42,21 @@ namespace CollectionImplementation
         /// <exception cref="IOException">Thrown if an error occurs while creating the directory. Check the inner exception for details.</exception>
         private void create()
         {
-            if (TargetPath == "" || TargetPath == null)
+            string path = getPath();
+            if (path == "" || path == null)
                 throw new ArgumentNullException("The path paramater cannot be empty or null");
+            
             // create the directory if it doesn't already exist
-            if (!Directory.Exists(TargetPath))
+            if (!Directory.Exists(path))
             {
                 try
                 {
-                    Directory.CreateDirectory(TargetPath);
+                    Directory.CreateDirectory(path);
+                    Console.WriteLine($"Created directory {path}");
                 }
                 catch (Exception e)
                 {
-                    throw new IOException($"Could not create directory {TargetPath}", e);
+                    throw new IOException($"Could not create directory {path}", e);
                 }
 
             }
