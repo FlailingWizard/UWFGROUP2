@@ -7,8 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
-using CollectionInterfaces;
-using DocumentInterfaces;
+
 
 namespace ApplicationStorageImplementation
 {
@@ -58,28 +57,27 @@ namespace ApplicationStorageImplementation
              );
 
             XElement root = saveFile.Element("storage");
-           
-
+        
             saveFile.Save(getBaseDirectory() + "saveFile.xml");
         }
 
-        public void saveNewCollection(IDocumentCollection collection)
+        public void saveNewCollection(string collectionName, string filePath)
         {
             // Save new collection in xml here
             XDocument saveFile = XDocument.Load(getBaseDirectory() + "saveFile.xml");
         }
 
-        public void saveNewDocument(IDocument document)
+        public void saveNewDocument(string documentName, string filePath)
         {
             // Save new document in xml here
         }
 
-        public void deleteCollection(IDocumentCollection collection)
+        public void deleteCollection(string collectionName)
         {
             // Delete collection in xml here
         }
 
-        public void deleteDocument(IDocument document)
+        public void deleteDocument(string documentName)
         {
             // Delete document in xml here
         }
