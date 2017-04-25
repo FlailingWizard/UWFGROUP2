@@ -143,6 +143,10 @@
     <None Include="Resources\Search.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationStorageImplementation\ApplicationStorageImplementation.csproj">
+      <Project>{563e5961-23fe-4acc-885d-8d2058921971}</Project>
+      <Name>ApplicationStorageImplementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CollectionImplementation\CollectionImplementation.csproj">
       <Project>{52bafbb5-d244-4bbd-99c4-b972b1cef651}</Project>
       <Name>CollectionImplementation</Name>
