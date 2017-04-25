@@ -57,6 +57,9 @@ namespace ApplicationStorageImplementation
                new XElement("storage")
              );
 
+            XElement root = saveFile.Element("storage");
+           
+
             saveFile.Save(getBaseDirectory() + "saveFile.xml");
         }
 
