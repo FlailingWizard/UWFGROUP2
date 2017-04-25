@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DocumentInterfaces
+namespace NLPInterfaces
 {
-    public interface IDocumentDeletion
+    public interface IVectorized
     {
-        String deleteDoc(String deletePath);
+
+        string getText();
+
     }
 }

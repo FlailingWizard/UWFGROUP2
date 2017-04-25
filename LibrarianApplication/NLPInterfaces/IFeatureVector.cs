@@ -8,9 +8,13 @@ namespace NLPInterfaces
 {
     public interface IFeatureVector
     {
-        int count();
-        void addValue(double value);
-        double getValue(int index);
+        int scalarCount();
+        void addScalarValue(double value);
+        double getScalarValue(int index);
+
+        int featureCount();
+        void addFeatureCalculator(IFeatureCalculator featureCalculator);
+
         double magnitude();
         double similarity(IFeatureVector compareVector);
     }

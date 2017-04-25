@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace NLPInterfaces
 {
-    public interface IPOSTagger
+    public interface IFeatureCalculator
     {
-        double tagPOS(List<string> posTags);
+        double calculate(List<string> posTags);
+
     }
 }

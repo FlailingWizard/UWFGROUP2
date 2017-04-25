@@ -15,7 +15,9 @@ namespace DocumentUnitTesting
             string sourcePath = @"C:\Users\Public\TestFolder";
             string targetPath = @"C:\Users\Public\TestFolder\Tester";
             DocumentCreation sut = new DocumentCreation();
+            
             //Act
+
             //String result = sut.storeDoc(fileName, sourcePath, targetPath);
             //Assert
             //Assert.AreEqual(@"C:\Users\Public\TestFolder\Tester", result);

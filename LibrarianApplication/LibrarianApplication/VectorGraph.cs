@@ -46,7 +46,7 @@ namespace LibrarianApplication
 
             // create and populate data series
             Series scalars = new Series();
-            for (int i = 0; i < vector.count(); i++)
+            for (int i = 0; i < vector.scalarCount(); i++)
             {
                 scalars.Points.AddXY(i,vector.getValue(i));
             }

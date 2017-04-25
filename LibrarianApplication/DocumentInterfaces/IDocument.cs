@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace DocumentInterfaces
 {
-    public interface IDocumentCreation
+    public interface IDocument
     {
-        String storeDoc(String sourcePath, String targetPath);
+
+        void delete();
+
     }
 }

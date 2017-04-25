@@ -2,36 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using NLPInterfaces;
-using Documents;
+using DocumentInterfaces;
+
 namespace NLPImplementations
 {
+
+    /// <summary>
+    /// This implements a specialized vector used to compare the features of documents to each other. 
+    /// An occurence ratio of parts of speech is used by default, but you can add additional
+    /// </summary>
     public class FeatureVector : IFeatureVector
     {
+
+        // Constants (used for creating default calculators)
+        private const string partOfSpeechVerb = "VB";
+        private const string partOfSpeechNoun = "NN";
+        private const string partOfSpeechPronoun = "PR";
+        private const string partOfSpeechConjugate = "CC";
+        private const string partOfSpeechAdjective = "JJ";
+        private const string partOfSpeechAdverb = "RB";
+
         private List<double> scalars;
-       
-        public int count()
+        private List<IFeatureCalculator> calculators;
+        private bool calcDone;
+
+        // accessors       
+        public int scalarCount()
         {
             return scalars.Count();
         }
-        public void setScalars(List<double> scalars)
-        {
-            this.scalars = scalars;
-        }
-        public void addValue(double value)
+
+        public void addScalarValue(double value)
         {
             scalars.Add(value);
         }
 
-        public double getValue(int index)
+        public double getScalarValue(int index)
         {
             return scalars[index];
         }
 
-        public FeatureVector()
+        public int featureCount()
         {
-            scalars = new List<double>();
+            return calculators.Count;
         }
 
+        public void addFeatureCalculator(IFeatureCalculator featureCalculator)
+        {
+            calculators.Add(featureCalculator);
+        }
+
+        // default constructor
+        
+        public FeatureVector(string text)
+        {
+            scalars = new List<double>();
+            calcDone = false;
+            createDefaultCalculators();
+        }
+
+        // public methods
         public double magnitude()
         {
             // returns the magnitude of this vector
@@ -45,8 +75,9 @@ namespace NLPImplementations
 
         public double similarity(IFeatureVector compareVector)
         {
+
             // check if both vectors have the same number of elements
-            if (compareVector.count() != this.count())
+            if (compareVector.scalarCount() != this.scalarCount())
             {
                 throw new ArgumentOutOfRangeException("vectors must have same number of elements");
             }
@@ -54,9 +85,9 @@ namespace NLPImplementations
             double dotProduct = 0;
 
             // calculate dot product
-            for (int i = 0; i < compareVector.count(); i++)
+            for (int i = 0; i < compareVector.scalarCount(); i++)
             {
-                dotProduct += scalars[i] + compareVector.getValue(i);
+                dotProduct += scalars[i] + compareVector.getScalarValue(i);
             }
 
             // calculate magnitudeproduct
@@ -70,29 +101,35 @@ namespace NLPImplementations
             return angle;
         }
 
-        public List<double> prep(Document doc)
+        // private methods
+        public void process(string text)
         {
-            NLPWrapper wrap = new NLPWrapper();
-            ADJTagger adj = new ADJTagger();
-            adverbTagger adv = new adverbTagger();
-            CONJTagger conj = new CONJTagger();
-            nounTagger noun = new nounTagger();
-            verbTagger verb = new verbTagger();
-            pronounTagger pro = new pronounTagger();
-            List<double> vectors = new List<double>();
-            string[] lines = System.IO.File.ReadAllLines(@doc.getTargetPath());
-            foreach (string line in lines)
+            NLPWrapper nlp = new NLPWrapper();
+
+            List<string> realTags = nlp.analyzeText(text);
+
+            // send the tags to each feature calculator and put result in scalar list
+            foreach (IFeatureCalculator featureCalc in calculators)
             {
-                List<String> realTags = wrap.analyzeText(line);
-                vectors[1] += adj.tagPOS(realTags);
-                vectors[2] += adv.tagPOS(realTags);
-                vectors[3] += conj.tagPOS(realTags);
-                vectors[4] += noun.tagPOS(realTags);
-                vectors[5] += verb.tagPOS(realTags);
-                vectors[6] += pro.tagPOS(realTags);
+                scalars.Add(featureCalc.calculate(realTags));
             }
-            doc.setVectors(vectors);
-            return vectors;
+
+            calcDone = true;
+        }
+
+
+        /// <summary>
+        /// Creates the default feature calculator instances.
+        /// </summary>
+        private void createDefaultCalculators()
+        {
+            calculators.Add(posCounter.create(partOfSpeechVerb));
+            calculators.Add(posCounter.create(partOfSpeechNoun));
+            calculators.Add(posCounter.create(partOfSpeechPronoun));
+            calculators.Add(posCounter.create(partOfSpeechConjugate));
+            calculators.Add(posCounter.create(partOfSpeechAdjective));
+            calculators.Add(posCounter.create(partOfSpeechAdverb));
+
         }
 
     }

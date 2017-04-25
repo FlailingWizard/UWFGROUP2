@@ -2,19 +2,16 @@
 using System.IO;
 using Console = System.Console;
 using edu.stanford.nlp.simple;
-using edu.stanford.nlp.trees;
 using java.util;
 using System.Collections.Generic;
 
 
-
-
-/*
- * 
- */
-
 namespace NLPImplementations
 {
+
+    /// <summary>
+    /// An adapter for the CoreNLP library.
+    /// </summary>
     public class NLPWrapper
     {
 
@@ -25,7 +22,6 @@ namespace NLPImplementations
         {
             this.nlpModelsDirectory = @"..\..\..\stanford-english-corenlp-2016-10-31-models\";
         }
-
 
         private void switchToModelsDirectory()
         {
@@ -67,26 +63,27 @@ namespace NLPImplementations
 
         public List<string> analyzeText(String text)
         {
-            List<string> realTags = new List<string>();
-            switchToModelsDirectory();
 
-            // run the parser on each sentence
+            switchToModelsDirectory();  // this can throw an exception but we don't want to catch it
+
+            List<string> returnTags = new List<string>();
+
+            // run NLP parser on each sentence of text.
             Document doc = new Document(text);
             for (int i = 0; i < doc.sentences().size(); i++)
             {
-
-                List posTags = doc.sentence(i).posTags();
-
-                for (int j = 0; j < posTags.size(); j++)
+                List posTags = doc.sentence(i).posTags();   // note: this is a java list!
+                Iterator iter = posTags.iterator();
+                // transfer to a .net list
+                while (iter.hasNext())
                 {
-                    realTags.Add((string)(posTags.get(j).ToString()));
-                    Console.WriteLine(realTags[j]);
+                    returnTags.Add(iter.next().ToString());
                 }
- 
             }
 
             switchToPreviousDirectory();
-            return realTags;
+            return returnTags;
+
         }
     }
 }
