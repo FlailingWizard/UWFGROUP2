@@ -63,6 +63,7 @@ namespace ApplicationStorageImplementation
         public void saveNewCollection(Collection collection)
         {
             // Save new collection in xml here
+            XDocument saveFile = XDocument.Load(getBaseDirectory() + "saveFile.xml");
         }
 
         public void saveNewDocument(Document document)

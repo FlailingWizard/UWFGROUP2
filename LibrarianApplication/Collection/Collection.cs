@@ -22,6 +22,11 @@ namespace Collections
         {
             return targetPath;
         }
+
+        public String getCollectionName()
+        {
+            return CollectionName;
+        }
         public List<double> getVectors()
         {
             return vectors;
