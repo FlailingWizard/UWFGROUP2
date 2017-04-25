@@ -63,6 +63,7 @@ namespace LibrarianApplication
         {
             InitializeComponent();
             collections = new List<IDocumentCollection>();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         
@@ -98,8 +99,6 @@ namespace LibrarianApplication
             backButton.Enabled = (mode == ViewMode.DocumentView);
             listCollections.Visible = (mode == ViewMode.CollectionView);
             listDocuments.Visible = (mode == ViewMode.DocumentView);
-
-
 
             if (viewMode == ViewMode.DocumentView)
             {
@@ -214,7 +213,7 @@ namespace LibrarianApplication
                 {
                     // create collection
                     string path = files[0];
-                    newCollection(path);
+                    newCollection(path, Path.GetFileNameWithoutExtension(path));
                     
                 }
 
@@ -234,6 +233,7 @@ namespace LibrarianApplication
                     IDocument doc = new Document(name, filePath, new FeatureVector(readFile(filePath)));
 
                     // determine which collection to add it to
+                    // call findDocumentPlace here
 
                 }
             }
@@ -242,9 +242,7 @@ namespace LibrarianApplication
             {
                 Console.WriteLine(filePath);
             }
-            // end debug
 
-            // figure out how many files
 
         }
 
@@ -261,11 +259,12 @@ namespace LibrarianApplication
         }
 
 
-        private void newCollection(string path)
+        public void newCollection(string path, string name)
         {
+            if (name == null)
+                name = "DemoCollection";
 
-            collections.Add( new DocumentCollection("DemoCollection", new FeatureVector(readFile(path)), Directory.GetCurrentDirectory()));
-
+            collections.Add(new DocumentCollection(name, new FeatureVector(readFile(path)), Directory.GetCurrentDirectory()));
             refreshView();
         }
 
@@ -313,6 +312,8 @@ namespace LibrarianApplication
         {
             // Add a new folder to the application
             // show the AddCollection form
+            AddCollectionWindow addCol = new AddCollectionWindow(this);
+            addCol.Show();
 
             //debug_AddThingsToList(1); // this is for testing the UI
         }

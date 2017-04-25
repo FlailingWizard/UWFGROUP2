@@ -25,7 +25,7 @@ namespace CollectionImplementation
             this.CollectionName = collectionName;
             this.Vector = vector;
             this.TargetPath = targetPath;
-
+            documents = new List<IDocument>();
             create();
         }
 
