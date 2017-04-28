@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NLPImplementations;
 using Moq;
 using System.Collections.Generic;
+using System.IO;
 
 namespace NLPTesting
 {
@@ -10,20 +11,61 @@ namespace NLPTesting
     public class UnitTest1
     {
         [TestMethod]
-        public void testingProcessMethod()
+        public void NLPWrapper_CurrentDirectory_IsPreserved()
         {
-           /* //Arrange
-            FeatureVector vector1 = new FeatureVector("We are testing this here.");
-            vector1.process();
-            Mock<FeatureVector> vector = new Mock<FeatureVector>("We are testing this here.");
-            vector.Setup(p => p.process()).Returns(vector1.getScalars());
+            // arrange
+            NLPWrapper sut = new NLPWrapper();
+            string test = "This is a test.";
+            string startingDirectory = Directory.GetCurrentDirectory();
 
-            FeatureVector sut = new FeatureVector("We are testing this here.");
-            //Act
-            List<double> result = sut.process();
-            //Assert
-            Assert.AreEqual(vector1.getScalars(), result);
-            */
+            // act
+            List<string> testResults = sut.analyzeText(test);
+
+            // assert
+            Assert.AreEqual(startingDirectory, Directory.GetCurrentDirectory());
+
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void NLPWrapper_NullParameter_ThrowsException()
+        {
+            // Arrange
+            NLPWrapper sut = new NLPWrapper();
+
+            // Act
+            sut.analyzeText(null);
+
+            // Assert
+
+        }
+
+        [TestMethod]
+        public void NLPWrapper_GoodInput_ReturnsNonEmptyList()
+        {
+            // arrange
+            NLPWrapper sut = new NLPWrapper();
+            string test = "This is a test.";
+
+            // act
+            List<string> testResults = sut.analyzeText(test);
+
+            // assert
+            Assert.IsNotNull(testResults);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void NLPWrapper_EmptyInput_ReturnsNull()
+        {
+            // arrange
+            NLPWrapper sut = new NLPWrapper();
+            string test = "";
+
+            // act
+            List<String> testResults = sut.analyzeText(test);
+
+        }
+
     }
 }

@@ -6,7 +6,7 @@ using DocumentInterfaces;
 
 namespace DocumentImplementation
 {
-    public class Document : IDocument, IVectorized
+    public class Document : IDocument
     {
 
         public string Name { get; }
@@ -25,7 +25,7 @@ namespace DocumentImplementation
             set
             {
                 string newPath = value;
-
+                targetPath = value;
                 // here we should change the location of the document
                 //store(targetPath, newPath);
 
@@ -37,7 +37,6 @@ namespace DocumentImplementation
             this.Name = name;
             this.targetPath = targetPath;
             this.vector = vector; 
-            
         }
 
 
@@ -86,9 +85,9 @@ namespace DocumentImplementation
         {
             return TargetPath + @"\" + Name;
         }
+
         public String storeDoc(String sourcePath, String targetPath)
         {
-
 
             string fileN = new FileInfo(sourcePath).Name;
             string sourceP = @sourcePath;

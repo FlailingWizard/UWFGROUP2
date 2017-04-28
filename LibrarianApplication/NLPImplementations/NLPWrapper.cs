@@ -64,9 +64,19 @@ namespace NLPImplementations
         public List<string> analyzeText(String text)
         {
 
-            switchToModelsDirectory();  // this can throw an exception but we don't want to catch it
+            if (text == null)
+            {
+                throw new ArgumentNullException("text is null");
+            }
 
             List<string> returnTags = new List<string>();
+
+            if (text == "")
+            {
+                throw new ArgumentException("text is empty");
+            }
+
+            switchToModelsDirectory();  // can throw an exception but don't catch it
 
             // run NLP parser on each sentence of text.
             Document doc = new Document(text);
@@ -81,7 +91,7 @@ namespace NLPImplementations
                 }
             }
 
-            switchToPreviousDirectory();
+            switchToPreviousDirectory();  // can throw an exception but don't catch it
             return returnTags;
 
         }
