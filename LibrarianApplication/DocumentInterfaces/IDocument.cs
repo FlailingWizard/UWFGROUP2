@@ -12,7 +12,7 @@ namespace DocumentInterfaces
     {
 
         string Name { get; }
-        void delete();
+        //void delete();
         IFeatureVector vector { get; set; }
 
     }

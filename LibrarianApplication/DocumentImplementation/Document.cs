@@ -27,7 +27,7 @@ namespace DocumentImplementation
                 string newPath = value;
 
                 // here we should change the location of the document
-                store(targetPath, newPath);
+                //store(targetPath, newPath);
 
             }
         }
@@ -35,7 +35,7 @@ namespace DocumentImplementation
         public Document(string name, string targetPath, IFeatureVector vector)
         {
             this.Name = name;
-            this.TargetPath = targetPath;
+            this.targetPath = targetPath;
             this.vector = vector; 
             
         }
@@ -82,6 +82,52 @@ namespace DocumentImplementation
         /// <param name="targetPath">The full path to where the file should be moved.</param>
         /// <exception cref="ArgumentException">Thrown if the target directory does not exist.</exception>
         /// <exception cref="InvalidOperationException">Thrown if the source file no longer exists.</exception>
+        public string getPath()
+        {
+            return TargetPath + @"\" + Name;
+        }
+        public String storeDoc(String sourcePath, String targetPath)
+        {
+
+
+            string fileN = new FileInfo(sourcePath).Name;
+            string sourceP = @sourcePath;
+            string targetP = @targetPath;
+
+            //string sourceFile = System.IO.Path.Combine(sourceP, fileN);
+            string destFile = System.IO.Path.Combine(targetP, fileN);
+
+            // If the directory does not exist do nothing
+            if (!System.IO.Directory.Exists(targetP))
+            {
+                Console.WriteLine("No directory to write to.");
+                return null;
+            }
+
+            System.IO.File.Copy(sourceP, destFile, true);
+
+            /*if (System.IO.Directory.Exists(sourceP))
+            {
+                string[] files = System.IO.Directory.GetFiles(sourceP);
+                foreach (string s in files)
+                {
+                    // fileName = System.IO.Path.GetFileName(s);
+                    destFile = System.IO.Path.Combine(targetP, fileN);
+                    System.IO.File.Copy(s, destFile, true);
+                }
+                return targetP;
+            }
+            else
+            {
+                Console.WriteLine("Source path does not exist!");
+            }
+            */
+            Console.Read();
+            return targetPath;
+
+
+        }
+        /*
         private void store(string sourcePath, string targetPath)
         {
 
@@ -126,26 +172,27 @@ namespace DocumentImplementation
 
 
         }
-
+        */
 
         /// <summary>
         /// This will delete the file on the disk.
         /// </summary>
         /// <param name="deletePath"></param>
-        public void delete()
+        public String delete()
         {
             if (File.Exists(targetPath))
             {
                 try
                 {
                     File.Delete(targetPath);
+                    return targetPath;
                 }
                 catch (System.IO.IOException e)
                 {
                     throw new IOException($"Unable to delete file {targetPath}", e);
                 }
             }
-            targetPath = null;  // not sure this is necessary?
+            return null;  // not sure this is necessary?
         }
 
     }

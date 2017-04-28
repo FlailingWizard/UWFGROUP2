@@ -29,9 +29,9 @@ namespace CollectionImplementation
             create();
         }
 
-        private string getPath()
+        public string getPath()
         {
-            return TargetPath + @"\" + CollectionName;
+            return  TargetPath + @"\" + CollectionName;
         }
 
         /// <summary>
@@ -68,19 +68,23 @@ namespace CollectionImplementation
         /// </summary>
         /// <param name="deletePath"></param>
         /// <returns></returns>
-        public void delete()
+        public string delete()
         {
             if (Directory.Exists(TargetPath))
             {
                 try
                 {
                     Directory.Delete(TargetPath, DeleteRecursively);
+                    return TargetPath;
                 }
                 catch (Exception e)
                 {
                     throw new IOException($"Could not delete directory {TargetPath}", e);
+                    return null;
                 }
+              
             }
+            return null;
         }
 
         public int count()

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF90D731-8D21-4348-A92D-26D6693986DC}</ProjectGuid>
+    <ProjectGuid>{308E395C-4E24-4706-AC58-6AF980731BE4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DocumentUnitTesting</RootNamespace>
-    <AssemblyName>DocumentUnitTesting</AssemblyName>
+    <RootNamespace>NLPTesting</RootNamespace>
+    <AssemblyName>NLPTesting</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,6 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.0.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Moq, Version=4.7.8.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.7.8\lib\net45\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -45,29 +53,22 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
-          <Private>False</Private>
-        </Reference>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTest1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DocumentImplementation\DocumentImplementation.csproj">
-      <Project>{2f086161-cda9-4ee3-81b7-9cfbcbdadf93}</Project>
-      <Name>DocumentImplementation</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NLPImplementations\NLPImplementations.csproj">
-      <Project>{D81B274C-6547-4A5C-92E7-B88AFEE112A9}</Project>
+      <Project>{d81b274c-6547-4a5c-92e7-b88afee112a9}</Project>
       <Name>NLPImplementations</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NLPInterfaces\NLPInterfaces.csproj">
-      <Project>{746F3B42-BCB8-4D83-A3D5-5905EA46DCA6}</Project>
-      <Name>NLPInterfaces</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

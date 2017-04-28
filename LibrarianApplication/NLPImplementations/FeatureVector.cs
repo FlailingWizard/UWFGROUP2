@@ -115,7 +115,7 @@ namespace NLPImplementations
             return angle;
         }
 
-        public void process()
+        public List<double> process()
         {
 
             if (Text == "" || Text == null)
@@ -134,6 +134,11 @@ namespace NLPImplementations
             }
 
             calcDone = true;
+            return scalars;
+        }
+        public List<double> getScalars()
+        {
+            return scalars;
         }
 
 

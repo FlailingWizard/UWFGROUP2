@@ -21,6 +21,6 @@ namespace NLPInterfaces
         double magnitude();
         double similarity(IFeatureVector compareVector);
 
-        void process();
+        List<double> process();
     }
 }
